@@ -1,9 +1,117 @@
-<html>
-    <head>
+<html lang="en" data-theme="null"><head>
+    
+    <script defer="" src="/static/script.js"></script>
+    <style>
+        :root {
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+        .fixed_top_site_header  {
+            position: absolute;
+            top: 10px;
+            left: 0%;
+            width: 99%;
+            max-height: 8%;
+            min-height: 50px;
+            background-color: rgb(0, 0, 0);
+            padding: 0.5%;
+            z-index: 100;
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
 
-        <script defer="" src="static/script.js"></script>
-    </head>
+        }
+        .fixed_top_site_header .logo {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transform: translate(-0px, -16px);
+            background-color: white;
+        }
+        .fixed_top_site_header img {
+            position: relative;
+            width: 90%;         /* Ensures the image doesn't overflow */
+            height: 90%;            /* Maintains the image's aspect ratio */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        .fixed_top_site_header .top_nav_panels {
+            /* background-color: rgb(0, 72, 255); */
+            position: relative;
+            padding: 0px;
+            top: 0%;
+            left: 0%;
+            right: 2%;
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        .top_nav_panels .top_nav_panel_item {
+            position: relative;
+            width: 25%;
+            text-align: center;
+            height: 100%;
+            background-color: rgb(90, 153, 255);
+            margin-left: 2px;
+            margin-right: 2px;
+            border-radius: 4px;
+            
+        }
+        .top_nav_panels .top_nav_panel_item p {
+            transform: translate(0%, -10%);
+        }
+        .main_container {
+            position: absolute;
+            top: 10%;
+            left: 0%;
+            width: 100%;
+            height: auto;
+            background-color: rgb(151, 255, 55);
+            
+        }
+        .main_container_element {
+          min-height: 1500px;
+          background-color: rgb(200,200,200);
+        }
+    </style>
+
     <body>
-        Hello World!
+        <div id="root">
+            <header class="fixed_top_site_header">
+                <div class="logo">
+                    <img src="https://media.licdn.com/dms/image/v2/D560BAQENuS264bcSog/company-logo_200_200/company-logo_200_200/0/1709603016474/standard_huamn_capital_logo?e=1745452800&v=beta&t=6Yqn9Mn1sfMH-0saR_z70oca3RCPyokGsn-OwcK4Gb8">
+                </div>
+                <div class="top_nav_panels">
+                    <div class="top_nav_panel_item">
+                        <p>Home</p>
+                    </div>
+                    <div class="top_nav_panel_item">
+                        <p>Mission</p>
+                    </div>
+                    <div class="top_nav_panel_item">
+                        <p>About</p>
+                    </div>
+                    <div class="top_nav_panel_item">
+                        <p>Contact</p>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="main_container">
+                <div class="main_container_element">
+                    Body Div 1
+                </div>
+            </div>
+            
+        </div>
     </body>
 </html>
