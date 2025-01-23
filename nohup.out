@@ -1,0 +1,15 @@
+[2025-01-23 08:40:21 +0000] [6507] [INFO] Starting gunicorn 23.0.0
+[2025-01-23 08:40:21 +0000] [6507] [INFO] Listening at: http://127.0.0.1:8000 (6507)
+[2025-01-23 08:40:21 +0000] [6507] [INFO] Using worker: sync
+[2025-01-23 08:40:21 +0000] [6508] [INFO] Booting worker with pid: 6508
+[2025-01-23 08:42:00 +0000] [6508] [INFO] Worker exiting (pid: 6508)
+home route reached.
+home route reached.
+home route reached.
+home route reached.
+home route reached.
+[2025-01-23 08:42:00 +0000] [6533] [INFO] Booting worker with pid: 6533
+[2025-01-23 08:43:03 +0000] [6507] [INFO] Handling signal: term
+[2025-01-23 08:43:03 +0000] [6533] [INFO] Worker exiting (pid: 6533)
+home route reached.
+[2025-01-23 08:43:03 +0000] [6507] [INFO] Shutting down: Master
