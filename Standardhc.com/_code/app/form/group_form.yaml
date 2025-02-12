@@ -1,0 +1,23 @@
+# group_id, parent_id, group_name, left_value, right_value, description, has_users
+# ~form 开头的内容用于指定表单属性
+~form:
+  _subject: "用户组信息"
+
+# 指定字段及过滤器等信息
+
+group_name:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "组名"
+  _req: true
+
+parent_id:
+  _ui: dropdownlist
+  _label: "上级组"
+  _tips: "请选择本分组的上级组，若为顶级组，请默认值"
+  _req: true
+
+description:
+  _ui: memo
+  _label: "分组说明"
+  _tips: "请输入本组的简单说明，100字内。"

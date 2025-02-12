@@ -1,0 +1,27 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _addanother: true
+  _continue: true
+
+# 指定字段及过滤器等信息
+
+rolename:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "组名称"
+  _tips: "由字母数字等组成，建议大写"
+  _req: true
+  class: "vTextField"
+
+
+description:
+  _ui: textbox
+  _label: "组描述"
+  _tips: "如：技术部"
+  class: "vTextField"
+
+
+permission_ids:
+  _ui: checkboxgroup
+  _label: "权限设置"
+  class: "vRadioField"

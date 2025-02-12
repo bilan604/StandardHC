@@ -1,0 +1,209 @@
+.object-tools{
+	position:absolute;
+	top:0;
+	right:0;
+	background:#F5F5F5;
+	padding-left:6px;
+}
+
+.object-tools li{
+	float:left;
+	display:block;
+	width:91px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	margin-left:5px;
+	_margin-left:3px;
+}
+
+.object-tools a{
+	display:block;
+	background:url(../images/nav-link.jpg) no-repeat;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.object-tools a:link,
+.object-tools a:hover,
+.object-tools a:active,
+.object-tools a:visited{
+	color:#fff;
+	text-decoration:none;
+}
+
+.object-tools a:hover{
+	background:url(../images/nav-link-hover.jpg) no-repeat;
+}
+
+.module{
+	border:1px solid #A8C6CE;
+	background:#fff;
+	padding:1px;
+}
+
+#toolbar{
+	margin:5px 0 5px 20px;
+}
+
+.search{
+	background:url(../images/search.jpg) no-repeat;
+	text-indent:-9999px;
+	width:57px;
+	height:22px;
+	border:none;
+	vertical-align:middle;
+}
+
+.searchbar{
+	border:1px solid #ccc;
+	height:20px;
+	vertical-align:middle;
+}
+
+#result_list{
+	width:100%;
+}
+
+
+
+
+tbody td,tbody th {
+	border-left: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    vertical-align: top;
+	padding:8px 5px;
+	text-align:center;
+}
+
+tbody th:first-child,
+tbody td:first-child{
+	border-left:none;
+}
+
+thead th,
+tfoot td {
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    background: #6BABF3 url(../images/nav-bg.jpg) top left repeat-x;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff; height:30px;
+}
+
+thead th:first-child,
+tfoot td:first-child {
+    border-left: none !important;
+}
+thead th a:link, thead th a:visited {
+    color: #fff;
+    display: block;
+}
+
+
+table thead th.sorted {
+}
+
+table thead th.sorted a {
+	padding-right:6px;
+}
+
+table thead th.ascending a {
+    background: url(../images/arrow-down.png) right 6px no-repeat;
+}
+
+table thead th.descending a {
+    background: url(../images/arrow-up.png) right 6px no-repeat;
+}
+
+.actions{
+	background:#BDD7F0;
+	padding:5px 0 5px 20px;
+}
+.actions input{
+	vertical-align:middle;
+}
+
+.actions .button{
+	background:url(../images/ok.jpg) no-repeat;
+	width:49px;
+	height:21px;
+	border:none;
+	text-indent:-9999px;
+	cursor:pointer;
+}
+
+
+/* PAGINATOR */
+
+.paginator {
+    font-size: 12px;
+    padding-top: 10px;
+	padding-right:10px;
+    padding-bottom: 10px;
+    line-height: 22px;
+    margin: 0;
+    border-top: 1px solid #ddd;
+	text-align:right;
+	color:#888;
+}
+
+.paginator a:link, .paginator a:visited {
+    padding: 2px 6px;
+    border: solid 1px #A8A8A8;
+	color:#888;
+    background: white;
+    text-decoration: none;
+}
+
+.paginator a.showall {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.paginator a.showall:hover {
+    color: #036 !important;
+    background: transparent !important;
+}
+
+.paginator .end {
+    border-width: 2px !important;
+    margin-right: 6px;
+}
+
+.paginator .this-page {
+    padding: 2px 6px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.paginator a:hover {
+    color: white;
+    background: #367FC4;
+    border-color: #036;
+}
+
+tr.nodata{
+	
+}
+tr.nodata td{
+	padding:8px 0;
+	text-align:center;
+	font-family:"ËÎÌו";
+}
+
+.row1 {
+    background: white;
+}
+
+.row2 {
+    background: white;
+}
+
+.changelink{
+	padding:0 0 0 20px;
+	background:url(../images/icon_edit.gif) no-repeat;
+}
+
+.trashlink{
+	padding:0 0 0 20px;
+	background:url(../images/icon_trash.gif) no-repeat;
+}

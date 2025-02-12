@@ -1,0 +1,31 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _subject: "添加项目需求"
+  _addanother: true
+  _continue: true
+ 
+# 指定字段及过滤器等信息
+parent_id:
+  _ui: hidden
+
+en_name:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "英文名称"
+  _req: true
+  _tips: "最多64个字符"
+  class: "vTextField"
+
+cn_name:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "中文名称"
+  _req: true
+  _tips: "最多64个字符"
+  class: "vTextField"
+
+order:
+  _ui: textbox
+  _label: "排序"
+  _tips: "数字越大越靠前"
+  size: 5

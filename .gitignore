@@ -7,3 +7,11 @@ venv/*
 myenv
 myenv/
 myenv/*
+
+nohup.out
+
+.DS_Store
+
+__pycache__
+__pycache__/
+__pycache__/*

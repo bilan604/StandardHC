@@ -1,0 +1,56 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _addanother: true
+  _continue: true
+
+# 指定字段及过滤器等信息
+
+name:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "产品名称"
+  _req: true
+  class: "vTextField"
+
+cid:
+  _ui: dropdownlist
+  _label: "产品分类"
+  _req: true
+  style: "display:none"
+
+needpic:
+  _ui: radiogroup
+  _label: "含有图片"
+  class: "vBoolField"
+  rel: "drawer.picurl"
+  value: 1
+
+picurl:
+  _ui: textbox
+  _label: "图片路径"
+  class: "vUploadField"
+
+intro:
+  _ui: memo
+  _label: "产品简介"
+  rows: 5
+  cols: 80
+
+description:
+  _ui: kindeditor
+  _label: "详细介绍"
+  rows: 20
+  cols: 100
+
+order:
+  _ui: textbox
+  _label: "排序"
+  _tips: "数字越大越靠前"
+  value: 0
+  size: 6
+
+hits:
+  _ui: textbox
+  _label: "浏览量"
+  value: 0
+  size: 6

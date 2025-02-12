@@ -1,0 +1,29 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _subject: "添加站内通知"
+  _continue: true
+
+# 指定字段及过滤器等信息
+
+to_uid:
+  _ui: hidden
+
+to_email:
+  _ui: textbox
+  _label: "收件人"
+  readonly: true
+
+title:
+  _ui: textbox
+  _filters: ['trim', 'strtolower']
+  _label: "站内信标题"
+  _req: true
+  size: 60
+
+content:
+  _ui: kindeditor
+  _label: "内容"
+  class: "vLargeTextField"
+  cols: 100
+  rows: 12
+  _req: true

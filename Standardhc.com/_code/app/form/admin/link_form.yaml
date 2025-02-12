@@ -1,0 +1,47 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _subject: "添加友情链接"
+  _addanother: true
+  _continue: true
+ 
+# 指定字段及过滤器等信息
+title:
+  _ui: textbox
+  _label: "链接名称"
+  _req: true
+  class: "vTextField"
+
+use_logo:
+  _ui: radiogroup
+  _label: "使用图片链接"
+  _req: true
+  value: 1
+
+file:
+  _ui: upload
+  _label: "上传图片"
+  class: "vTextField"
+
+logo:
+  _ui: hidden
+
+url:
+  _ui: textbox
+  _label: "链接地址"
+  class: "vTextField"
+  _req: true
+  value: "http://"
+
+order:
+  _ui: textbox
+  _label: "排序"
+  _tips: "数字越大越靠前显示"
+  value: 0
+
+language:
+  _ui: dropdownlist
+  _label: "语言"
+
+status:
+  _ui: dropdownlist
+  _label: "状态"

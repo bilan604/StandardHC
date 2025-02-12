@@ -1,0 +1,84 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _continue: true
+  _labs:
+    lab_common: "详细内容"
+    lab_img: "图片设置"
+    lab_seo: "SEO设置"
+
+# 指定字段及过滤器等信息
+
+page_tree:
+  _ui: hidden
+
+#page_title:
+#  _lab: lab_common
+#  _ui: textbox
+#  _filters: ['trim']
+#  _label: "标题"
+#  _req: true
+#  class: "vTextField"
+  
+#sub_title:
+ # _ui: textbox
+  #_filters: ['trim']
+  #_label: "副标题"
+ # _req: true
+ # class: "vTextField"
+
+#page_name:
+#  _ui: textbox
+#  _req: true
+#  class: "vTextField"
+#  _label: "URL地址优化"
+#  _tips: "优化后的访问路径，如输入：jieshao 则此单页访问地址为jieshao.html 留空则系统自动生成。"
+
+#page_intro:
+ # _ui: memo
+  #_label: "摘要"
+  #_tips: "内容摘要，留空则系统自动从内容中获取。"
+  #class: "vMultipleTextField"
+
+page_content:
+  _lab: lab_common
+  _ui: kindeditor
+  _req: true
+  _label: "内容"
+
+page_banner:
+  _lab: lab_img
+  _ui: upload
+  _label: "Banner"
+  _help: "“请上传大小为 1400 * 217 的图片”"
+  _req: true
+  class: "vUploadField"
+
+page_image:
+  _ui: upload
+  _label: "页面右侧图片（大）"
+  _help: "“请上传大小为 279 * 125 的图片，用于宽屏的浏览器中显示”"
+  _req: true
+  class: "vUploadField"
+
+page_image_small:
+  _ui: upload
+  _label: "页面右侧图片（小）"
+  _help: "“请上传大小为 180 * 81 的图片，用于窄屏的浏览器中显示”"
+  _req: true
+  class: "vUploadField"
+
+seo_title:
+  _lab: lab_seo
+  _ui: textbox
+  _label: "SEO标题"
+  class: "vTextField"
+
+seo_keywords:
+  _ui: memo
+  _label: "SEO关键词"
+  class: "vMultipleTextField"
+
+seo_description:
+  _ui: memo
+  _label: "SEO描述信息"
+  class: "vMultipleTextField"

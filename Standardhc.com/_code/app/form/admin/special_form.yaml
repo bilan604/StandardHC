@@ -1,0 +1,45 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _subject: "Add special"
+ 
+# 指定字段及过滤器等信息
+categoryid:
+  _ui: dropdownlist
+  _label: "Category"
+  _req: true
+
+en_name:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "English Name"
+  _req: true
+  size: 60
+
+po_name:
+  _ui: textbox
+  _filters: ['trim']
+  _label: "Portuguese Name"
+  _req: true
+  size: 60
+
+large_pic:
+  _ui: textbox
+  _label: "Picture"
+  class: "vTextField"
+
+en_description:
+  _ui: memo
+  _label: "English Description"
+  class: "vLargeTextField"
+  rows: 10
+
+po_description:
+  _ui: memo
+  _label: "Portuguese Description"
+  class: "vLargeTextField"
+  rows: 10
+
+order:
+  _ui: textbox
+  _label: "Sorting"
+  _tips: "order by digest desc"

@@ -1,0 +1,51 @@
+# ~form 开头的内容用于指定表单属性
+~form:
+  _subject: "预算"
+  _reset: true
+ 
+# 指定字段及过滤器等信息
+name:
+  _ui: textbox
+  _label: "姓名"
+  _req: true
+  class: input1
+  size: 40
+
+phone:
+  _ui: textbox
+  _label: "电话"
+  _req: true
+  class: input1
+  size: 40
+  
+email:
+  _ui: textbox
+  _label: "电子邮箱"
+  class: input1
+  size: 40
+
+company:
+  _ui: textbox
+  _label: "公司名称"
+  class: input1
+  _req: true
+  size: 80
+
+website:
+  _ui: textbox
+  class: input1
+  size: 100
+  
+title:
+  _ui: textbox
+  _label: "联系方式"
+  class: input1
+  size: 100  
+  
+content:
+  _ui: memo
+  _label: "您的留言"
+  _req: true
+  cols: 98
+  rows: 8
+  class: "input2"

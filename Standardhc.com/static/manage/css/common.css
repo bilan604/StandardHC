@@ -1,0 +1,320 @@
+@charset "utf-8";
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+img{border:none;}
+em,strong{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+input,button,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+.border-none{ border:none;}
+.none{ display:none}
+/* a defined */
+a:link,a:hover,a:active,a:visited{color:#333; text-decoration:none;}
+a:hover{ text-decoration:underline}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+/* Hides from IE-mac \*/* html .clearfix{height:1%;}.clearfix{display:block;}/* End hide from IE-mac */
+
+/* login page */
+.login{
+	background:url(../images/login-bg.jpg) top repeat-x;
+}
+
+#login-main{
+	width:732px;
+	margin:116px auto 0 auto;
+	position:relative;
+	background:url(../images/login-box-bg.png) repeat-y;
+	_background:#fff;
+	_border:2px solid #D1D1D1;
+}
+
+#login-main .login-header{
+	height:16px; position:absolute; top:-16px; width:100%;
+	background:url(../images/login-box-header.png) top left no-repeat;
+	_background:none;
+}
+
+#login-main .login-footer{
+	height:24px; position:absolute; bottom:-24px; width:100%;
+	background:url(../images/login-box-footer.png) bottom left no-repeat;
+	_background:none;
+}
+
+.login-box{
+	padding:45px 5px 50px 5px;
+}
+
+.login-box-copyright{
+	float:left; width:270px;
+	padding-right:20px;
+	text-align:right;
+	min-height:300px;
+	_height:300px;
+}
+
+.login-box-copyright h1{
+	margin:60px 0 10px 0;
+}
+.login-box-copyright .copyright{
+	margin:125px 0 0 0;
+	color:#666;
+}
+
+.login-box-form{
+	border-left:1px solid #88B7D1;
+	float:left; width:410px;
+	padding-left:20px;
+	background:url(../images/login-lock.jpg) 284px 28px no-repeat;
+}
+.login-box-form h1{ margin:15px 0 0 0;}
+
+.login-box-form .form-row{
+	padding:5px 0 5px 27px;
+}
+.login-box-form .form-row label{
+	padding:0 12px 0 0; vertical-align:middle;
+}
+.login-box-form .form-row input{
+	height:22px;
+	width:155px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+　　border-radius:3px;
+	border:1px #669ACC solid;
+	font-size:14px; font-weight:700;
+	color:#333;
+}
+.login-box-form .form-row input.vcode{
+	width:62px;
+	vertical-align:middle;
+}
+.login-box-form .remember{
+	padding-left:85px;
+}
+.login-box-form .remember input{
+	height:auto; width:auto; vertical-align:middle;
+}
+.login-box-form .remember label{
+}
+
+.login-box-form .submit-row{
+	padding:10px 0 0 85px;
+}
+.login-tips{
+	padding:0 0 0 40px;
+	position:relative;
+	margin:22px 0 0 45px;
+	color:#666;
+}
+.login-tips h2{
+	position:absolute; left:0; top:0;
+}
+p.errornote{
+	border:1px solid #F8ACAC;
+	padding:5px 5px 5px 30px;
+	background:#FFD1D1 url(../images/exclamation.png) 5px center no-repeat;
+	_background-image:url(../images/exclamation.gif);
+	color:#444;
+	width:205px;
+}
+
+
+/* main */
+#container {
+    position: relative;
+    width: 100%;
+    min-width: 760px;
+    padding: 0;
+}
+
+#header{
+	width:100%;
+	background:url(../images/header-bg.jpg) repeat-x;
+	height:92px; border-bottom:4px solid #0D4F8B;
+	position:relative;
+}
+
+#branding{
+	float:left;
+	width:280px;
+	height:100%;
+	background:url(../images/cms-title.jpg) 34px 38px no-repeat;
+}
+#branding h1{
+	color:#fff;
+	margin:20px 0 0 31px;
+}
+
+.user-tips{
+	float:left; color:#fff;
+	padding:48px 0 0 28px;
+	background:url(../images/u.gif) 8px 52px no-repeat;
+	width:270px;
+}
+.user-tips a:link,
+.user-tips a:hover,
+.user-tips a:active,
+.user-tips a:visited{
+	color:#FFF000;
+}
+
+.user-shortcut{
+	position:absolute;
+	right:0;
+	top:0;
+	color:#fff;
+	width:350px;
+	padding:0 10px 0 0;
+}
+
+.user-shortcut .date-tips{
+	float:left;
+	padding:0 0 15px 25px;
+	background:url(../images/date.jpg) 2px 3px no-repeat;
+}
+
+.user-shortcut ul{
+	float:right;
+}
+.user-shortcut li{
+	float:left;
+	width:65px; height:27px;
+	background:url(../images/header-btn-bg.jpg) no-repeat;
+	text-align:center; line-height:23px;
+	display:inline; margin-left:5px;
+}
+.user-shortcut li a:link,
+.user-shortcut li a:hover,
+.user-shortcut li a:active,
+.user-shortcut li a:visited{
+	color:#fff;
+	text-decoration:none;
+}
+
+.user-menu{
+	position:absolute;
+	right:0;
+	bottom:0;
+	height:28px;
+	padding:0 12px 0 0;
+}
+
+.user-menu li{
+	float:right;
+	width:73px;
+	height:100%;
+	display:inline;
+	margin-left:5px;
+}
+.user-menu li a{
+	background:url(../images/header-btn-bg2.jpg) no-repeat;
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:28px;
+	color:#fff;
+}
+.user-menu li a:hover,.user-menu li.selected a{
+	background:url(../images/header-btn-bg2-hover.jpg) no-repeat;
+	text-decoration:none;
+}
+
+.main{
+	background:#F5F5F5;
+	padding:16px 10px 0 18px;
+}
+#sidebar{
+	position:absolute;
+	left:0;
+	top:0;
+	border-left:3px solid #0E4E8B;
+	height:100%;
+	width:8px;
+	display:block;
+}
+
+#sidebar a{
+	display:block;
+	margin-top:220px;
+	float:left; width:8px;
+	background:url(../images/sidebar-close.jpg) no-repeat;
+	height:90px;
+}
+
+#sidebar a.closed{
+	background:url(../images/sidebar.jpg) no-repeat;
+}
+
+.breadcrumbs{
+	background:#4B4B4B;
+	color:#fff;
+	padding:0 0 0 22px;
+	height:25px; 
+	line-height:25px;
+}
+.breadcrumbs a:link,
+.breadcrumbs a:hover,
+.breadcrumbs a:active,
+.breadcrumbs a:visited{
+	color:#fff;
+}
+
+
+#content-main {
+    float: left;
+    width: 100%;
+	padding-top:8px;
+}
+
+#footer {
+    clear: both;
+    padding: 10px;
+}
+
+.msg-notice{
+	margin-top:5px;
+	border:1px solid #BBDF8D;
+	background:#EAF7D9 url(../images/accept.png) 5px 8px no-repeat;
+	padding:8px 0 8px 28px;
+}
+
+div.msg-error{
+	margin-top:5px;
+	border:1px solid #F8ACAC;
+	background:#FFD1D1 url(../images/exclamation.png) 5px 8px no-repeat;
+	padding:8px 0 8px 28px;
+}
+
+dl.msg-error dt{
+	margin-top:5px;
+	border:1px solid #F8ACAC;
+	background:#FFD1D1 url(../images/exclamation.png) 5px 8px no-repeat;
+	padding:8px 0 8px 28px;
+}
+
+dl.msg-error dd{
+	background:#FFF1F1;
+	border:1px solid #FDDCDC;
+	border-top:none;
+	padding:8px 0 8px 28px;
+}
+.ajax{
+	color:#1A61C9;
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+.left_nrk td a,
+.left_nrk td a:link,
+.left_nrk td a:hover,
+.left_nrk td a:active,
+.left_nrk td a:visited{
+	color:#1A61C9;
+	text-decoration:underline;
+}
+.left_nrk td a:hover{
+	text-decoration:none;
+}
