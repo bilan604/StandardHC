@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Standard Human Capital</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
+    <script defer src="about.js"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: 12vh;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .logo_image {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            height: 80%;
+            min-height: 80%;
+            max-height: 80%;
+            transform: translate(10%, 10%);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .hero img {
+            width: 80%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 50px 5%;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .history-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Commitment Section */
+        .commitment {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .commitment div {
+            flex: 1;
+            min-width: 300px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Leadership Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Trusted Companies Section */
+        .join-team {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 50px 5%;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .commitment {
+                flex-direction: column;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img class="logo_image" src="https://media.licdn.com/dms/image/v2/D560BAQENuS264bcSog/company-logo_200_200/company-logo_200_200/0/1709603016474/standard_huamn_capital_logo?e=1747267200&amp;v=beta&amp;t=Nncj8ZB0BGryx0oKZ9cmMRZbUKW_wOPs6-opgh8TaTI" loading="lazy" alt="STANDARD HUMAN CAPITAL logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="https://s35891.pcdn.co/wp-content/uploads/LAN_B37_01.jpg.optimal.jpg" alt="Business Meeting">
+        <h1>About Standard Human Capital</h1>
+    </section>
+
+    <section class="section">
+        <h2>Our History</h2>
+        <p class="history-text">
+            Founded in 1994, Standard Human Capital began by providing high-level talent search services for Fortune 500 companies entering and operating in China. Over the years, we have grown into a global human capital firm, specializing in financial, technology, and fintech industries. 
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Our Commitment to Globalization & Talent Solutions</h2>
+        <div class="commitment">
+            
+            <div>
+                <h3>✔ Empowering Startups</h3>>
+                We act as strategic business partners for startups, accelerating their growth and helping them scale into unicorns.
+            </div>
+            <div>
+                <h3>✔ Bridging Global Talent</h3>
+                We bring in internationally experienced talent to Chinese enterprises, enabling seamless cross-border expansion.
+            </div>
+            <div>
+                <h3>✔ Localization Expertise</h3>
+                We assist foreign companies in China in finding top local talent, ensuring smooth market entry and sustainable business operations.
+            </div>
+        </div>
+    </section>
+
+    <!--
+
+    <section class="section">
+        <h2>Our Leadership Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/xu.jpg" alt="Mr. Xu">
+                <h3>Mr. Xu</h3>
+                <p>Senior Expert in System Software</p>
+            </div>
+            <div class="team-member">
+                <img src="images/zhang.jpg" alt="Mr. Zhang">
+                <h3>Mr. Zhang</h3>
+                <p>Cloud Network Expert</p>
+            </div>
+            <div class="team-member">
+                <img src="images/xia.jpg" alt="Mr. Xia">
+                <h3>Mr. Xia</h3>
+                <p>Chief Scientist of AI Department</p>
+            </div>
+        </div>
+    </section>
+
+    -->
+
+    <footer>
+        &copy; 2025 Standard Human Capital - All Rights Reserved
+    </footer>
+
+</body>
+</html>
