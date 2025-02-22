@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managed Services - Standard Human Capital</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
+    <script defer src="services.js"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: 12vh;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .logo_image {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            height: 80%;  /* 80% of the parent’s height */
+            min-height: 80%;
+            max-height: 80%;
+            transform: translate(10%, 10%);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 5% 50px;
+        }
+
+        .hero img {
+            width: 80%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 50px 5%;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .text-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* HR Solutions */
+        .solution {
+            display: flex;
+            align-items: flex-start;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .solution img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .solution-content {
+            flex: 1;
+        }
+
+        .solution-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .solution-content ul {
+            padding-left: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .solution {
+                flex-direction: column;
+            }
+
+            .solution img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img class="logo_image" src="https://media.licdn.com/dms/image/v2/D560BAQENuS264bcSog/company-logo_200_200/company-logo_200_200/0/1709603016474/standard_huamn_capital_logo?e=1747267200&amp;v=beta&amp;t=Nncj8ZB0BGryx0oKZ9cmMRZbUKW_wOPs6-opgh8TaTI" loading="lazy" alt="STANDARD HUMAN CAPITAL logo" id="ember69" class="evi-image lazy-image ember-view org-top-card-primary-content__logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="https://www.shutterstock.com/image-photo/asian-business-associates-meeting-street-600nw-1958236624.jpg" alt="Managed Services">
+        <h1>Global Human Capital Solutions</h1>
+    </section>
+
+    <section class="section">
+        <h2>Strategic Talent Solutions</h2>
+        <p class="text-content">
+            Standard Human Capital is a global leader in human capital services, specializing in the finance and technology industries. 
+            We partner with startups and established enterprises, helping them scale through strategic talent acquisition, business 
+            expansion, and localization solutions.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Our Comprehensive HR Solutions</h2>
+
+        <div class="solution">
+            <img src="https://cdn1.iconfinder.com/data/icons/content-10/24/user-document-checked-512.png" alt="RPO">
+            <div class="solution-content">
+                <h3>Recruitment Process Outsourcing (RPO)</h3>
+                <p>We streamline hiring for global businesses, ensuring seamless recruitment and onboarding.</p>
+                <ul>
+                    <li>Tailored service-level agreements</li>
+                    <li>Comprehensive employer branding strategies</li>
+                    <li>Access to high-caliber talent pools</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="solution">
+            <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
+            <div class="solution-content">
+                <h3>Business Process Outsourcing (BPO)</h3>
+                <p>Helping companies optimize operations through customized workforce solutions.</p>
+                <ul>
+                    <li>IT and technical support solutions</li>
+                    <li>Cost-effective customer service models</li>
+                    <li>24/7 business support and automation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="solution">
+            <img src="https://cdn0.iconfinder.com/data/icons/documents-27/32/check-512.png" alt="HR">
+            <div class="solution-content">
+                <h3>HR Services</h3>
+                <p>We provide advanced HR solutions tailored for enterprises expanding globally.</p>
+                <ul>
+                    <li>Professional Employer Organization (PEO)</li>
+                    <li>Human Resource Outsourcing (HRO)</li>
+                    <li>Employer of Record (EOR)</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        &copy; 2025 Standard Human Capital - All Rights Reserved
+    </footer>
+
+</body>
+</html>

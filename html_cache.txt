@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHC - Talent Solutions</title>
-    <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
+    <title>SHC</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <style>
@@ -39,24 +38,19 @@
             z-index: 1000;
         }
 
+        .logo_image {
+            position: absolute;
+            height: 80%;  /* 80% of the parent’s height */
+            min-height: 80%;
+            max-height: 80%;
+            transform: translate(0%, -50%);
+        }
+
         .logo {
-            font-size: 1.5em;
+            font-size: 1.5rem;
             font-weight: bold;
         }
         
-        .logo_image {
-            position: absolute;
-            left: 0%;
-            top: 0%;
-            height: 80%;
-            min-height: 80%;
-            max-height: 80%;
-            transform: translate(10%, 10%);
-        }
-
-        #main-image {
-            border-radius: 20px;
-        }
 
         nav ul {
             list-style: none;
@@ -129,15 +123,6 @@
             gap: 20px;
         }
 
-        .feature-grid div {
-            transition: 0.3s;
-        }
-
-        .feature-grid div:hover {
-            background: #007BFF;
-            color: white;
-        }
-
         .feature-box {
             padding: 20px;
             background: #f5f5f5;
@@ -158,9 +143,8 @@
         }
 
         .company-logos img {
-            max-width: 240px;
+            max-width: 120px;
             height: auto;
-            border-radius: 10px;
         }
 
         /* Footer */
@@ -197,68 +181,52 @@
 
     <header>
         <div class="logo">
-            <img class="logo_image" src="https://media.licdn.com/dms/image/v2/D560BAQENuS264bcSog/company-logo_200_200/company-logo_200_200/0/1709603016474/standard_huamn_capital_logo?e=1747267200&amp;v=beta&amp;t=Nncj8ZB0BGryx0oKZ9cmMRZbUKW_wOPs6-opgh8TaTI" loading="lazy" alt="STANDARD HUMAN CAPITAL logo">
+            <img class="logo_image" src="https://media.licdn.com/dms/image/v2/D560BAQENuS264bcSog/company-logo_200_200/company-logo_200_200/0/1709603016474/standard_huamn_capital_logo?e=1747267200&amp;v=beta&amp;t=Nncj8ZB0BGryx0oKZ9cmMRZbUKW_wOPs6-opgh8TaTI" loading="lazy" alt="STANDARD HUMAN CAPITAL logo" id="ember69" class="evi-image lazy-image ember-view org-top-card-primary-content__logo
+            ">
+            
         </div>
-        
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Most Reliable Strategic Partner for Talent</h1>
-        <img id="main-image" src="https://media.istockphoto.com/id/174776170/photo/blue-manhattan-skyscapers-wall-street-new-york-city.jpg?s=612x612&w=0&k=20&c=9r5p7ujfzv98knm8jgWAhXugoKuAtkKaYasKmVKlMkg=" alt="Business meeting">
+        <img src="hero-image.jpg" alt="Business meeting">
     </section>
 
     <section class="services">
-        <div>
-            <h2>Executive Search</h2>
-            We provide high-level talent search services, specializing in financial, technology, and fintech industries. Our expertise ensures top-tier talent for leadership and executive roles.
-        </div>
-        <div>
-            <h2>Talent Acquisition</h2>
-            Our recruitment solutions help businesses secure international professionals with the right experience, bridging talent gaps in finance, technology, and innovation sectors.
-        </div>
-        <div>
-            <h2>Industry Mapping</h2>
-            We analyze industry trends, job markets, and business structures to provide clients with valuable insights into workforce distribution, competition, and hiring strategies.
-        </div>
+        <div>Recruiting & Staffing</div>
+        <div>Managed Services</div>
+        <div>Job Seeker</div>
     </section>
 
     <section class="features">
-        <h2>What Sets Standard HC Apart?</h2>
+        <h2>What Sets SHC Apart?</h2>
         <div class="feature-grid">
-            <div class="feature-box"><h2>Full Mapping</h2> We provide personalized solutions for clients by mapping out their industry, business operations, and job requirements for in-depth searches.</div>
-            <div class="feature-box"><h2>Full Assistance Until Onboarding</h2> From talent sourcing to background checks and interviews, we're there every step of the way.</div>
-            <div class="feature-box"><h2>Globalization & Localization</h2> We help Chinese enterprises expand internationally while supporting foreign businesses in navigating the Chinese market with local talent.</div>
+            <div class="feature-box">Speed and Agility</div>
+            <div class="feature-box">Diverse Global Talent Pool</div>
+            <div class="feature-box">A Personal Approach</div>
         </div>
     </section>
 
     <section class="trusted-companies">
-        <h2>Our Clients</h2>
+        <h2>Great Companies Trust Us</h2>
         <div class="company-logos">
-            <img src="https://logos-world.net/wp-content/uploads/2024/07/Tencent-Symbol.png" alt="Tencent">
-            <img src="https://brandlogos.net/wp-content/uploads/2021/10/alibaba-logo.png" alt="Alibaba">
-            <img src="https://iabtechlab.com/wp-content/uploads/2018/11/bytedance-logo-jpg-03.jpg" alt="Bytedance">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*kZrcTfL7P3DxzzcUQ-QUSg.png" alt="Ant Financial">
+            <img src="baidu-logo.png" alt="Baidu">
+            <img src="samsung-logo.png" alt="Samsung">
+            <img src="starbucks-logo.png" alt="Starbucks">
+            <img src="goldman-logo.png" alt="Goldman Sachs">
         </div>
-
-        <div class="company-logos">
-            <img src="https://images.seeklogo.com/logo-png/55/2/standard-chartered-bank-uganda-logo-png_seeklogo-550948.png" alt="Standard Charted">
-            <img src="https://cdn-biz2x.biz2credit.com/wp-content/uploads/fly-images/3090/hsbc-logo-col2-780x426.png" alt="HSBC">
-            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/china-merchants-bank-logo.png" alt="China Merchants Bank">
-            <img src="https://icons.veryicon.com/png/o/business/bank-logo-collection/china-citic-bank-portfolio.png" alt="China Citic Bank">
-        </div>
-            
     </section>
 
     <footer>
-        &copy; 2025 Standard Human Capital - All Rights Reserved
+        &copy; 2025 IntelliPro - All Rights Reserved
     </footer>
 
 </body>

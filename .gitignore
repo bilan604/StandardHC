@@ -1,0 +1,12 @@
+.env
+
+nohup.out
+
+myenv/
+venv/
+
+__pycache__/
+__pycache__/*
+
+.DS_Store
+
