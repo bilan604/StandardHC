@@ -2074,3 +2074,18 @@ home route reached.
 [2025-02-22 19:21:04 +0000] [391884] [INFO] Worker exiting (pid: 391884)
 home route reached.
 [2025-02-22 19:21:04 +0000] [391883] [INFO] Shutting down: Master
+[2025-02-22 19:24:09 +0000] [391991] [INFO] Starting gunicorn 23.0.0
+[2025-02-22 19:24:09 +0000] [391991] [INFO] Listening at: http://127.0.0.1:8000 (391991)
+[2025-02-22 19:24:09 +0000] [391991] [INFO] Using worker: sync
+[2025-02-22 19:24:09 +0000] [391992] [INFO] Booting worker with pid: 391992
+[2025-02-22 19:26:24 +0000] [391991] [INFO] Handling signal: term
+[2025-02-22 19:26:24 +0000] [391992] [INFO] Worker exiting (pid: 391992)
+home route reached.
+home route reached.
+services route reached.
+about route reached.
+[2025-02-22 19:26:24 +0000] [391991] [INFO] Shutting down: Master
+[2025-02-22 19:26:31 +0000] [392007] [INFO] Starting gunicorn 23.0.0
+[2025-02-22 19:26:31 +0000] [392007] [INFO] Listening at: http://127.0.0.1:8000 (392007)
+[2025-02-22 19:26:31 +0000] [392007] [INFO] Using worker: sync
+[2025-02-22 19:26:31 +0000] [392008] [INFO] Booting worker with pid: 392008
