@@ -8,6 +8,8 @@ myenv
 myenv/
 myenv/*
 
+__pycache__/
+
 .DS_Store
 nohup.out
 
