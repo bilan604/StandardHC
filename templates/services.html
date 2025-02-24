@@ -78,13 +78,12 @@
         .hero h1 {
             font-size: 2.5rem;
             margin-top: 20px;
-            padding: 20px;
         }
 
         .hero img {
             width: 50%;
             max-width: 500%;
-            border-radius: 10px;
+            border-radius: 20px;
         }
 
         /* Section Styling */
@@ -101,6 +100,15 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: justify;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+            
+        }
+
+        .text-content:hover {
+            background: #007BFF;
+            color: white;
         }
 
         /* HR Solutions */
@@ -147,6 +155,15 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                width: 100%;
+            }
+
             .solution {
                 flex-direction: column;
             }
