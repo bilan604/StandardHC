@@ -8,17 +8,11 @@ myenv
 myenv/
 myenv/*
 
-nohup.out
-
 .DS_Store
 nohup.out
 
 myenv/
 venv/
-
-__pycache__
-__pycache__/
-__pycache__/*
 
 .DS_Store
 
