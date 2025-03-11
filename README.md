@@ -26,9 +26,9 @@ There is a linux virtual machine running on Google Cloud that hosts the applicat
 `pip install flask gunicorn`  
 
 #### Actionable requirements specific related to nginx, SSL certificate, firewall, etc:  
-0. I believe first the address `http://127.0.0.1:8000` must be specified in GCP for the project/machine to be listened to.  
-1. create file: `sudo nano /etc/nginx/sites-available/flaskapp`  
-2. file contents:  
+1. I believe first the address `http://127.0.0.1:8000` must be specified in GCP for the project/machine to be listened to.  
+2. create file: `sudo nano /etc/nginx/sites-available/flaskapp`
+File Contents:  
 ```
 server {
     listen 80;
