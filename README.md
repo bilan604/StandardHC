@@ -20,9 +20,9 @@ cd StandardHC
 source myenv/bin/activate  
 ```
 
--'nohup' indicates where the logs are going to be stored (into a log file named `nohup.out`)  
+-`nohup` indicates where the logs are going to be stored (into a log file named `nohup.out`)  
 
--The '&' at the end tells the application to keep running even when the SSH terminal window is closed.  
+-The `&` at the end tells the application to keep running even when the SSH terminal window is closed.  
 
 
 ## Check if the application is running on GCP  
