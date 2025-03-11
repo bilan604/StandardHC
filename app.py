@@ -13,14 +13,10 @@ app = Flask(__name__)
 limiter = Limiter(get_remote_address, app=app, default_limits=["100 per minute", "1000 per hour"])
 
 
-#### REFACTOR:
-
 # Tighter limits can be added within function for POST requests, etc
 # but it should never exceed these quotas
 GLOBAL_SECOND_MAX = "5 per second"
 GLOBAL_MINUTE_MAX = "60 per second"
-
-####
 
 
 @app.route("/contact/", methods=["GET", "POST"])
@@ -33,17 +29,20 @@ def contact():
 
     return render_template('contact.html', message="Let's Connect")
 
+
 @app.route("/services/", methods=["GET"])
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def services():
     return render_template('services.html')
 
+
 @app.route("/about/", methods=["GET"])
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about():
     return render_template('about.html')
+
 
 @app.route("/")
 @limiter.limit(GLOBAL_SECOND_MAX)
