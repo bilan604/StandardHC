@@ -25,7 +25,7 @@ There is a linux virtual machine running on Google Cloud that hosts the applicat
 <b>NOTE</b>: Syntax requires being inside the virtual environement  
 `pip install flask gunicorn`  
 
-#### Requirements specific for nginx:  
+#### Actionable requirements specific related to nginx, SSL certificate, firewall, etc:  
 0. I believe first the address `http://127.0.0.1:8000` must be specified in GCP for the project/machine to be listened to.  
 1. create file: `sudo nano /etc/nginx/sites-available/flaskapp`  
 2. file contents:  
@@ -80,8 +80,9 @@ nohup gunicorn --bind 127.0.0.1:8000 app:app &
 --`nohup` indicates where the logs are going to be stored (into a log file named `nohup.out`)  
 --`&` at the end tells the application to keep running even when the SSH terminal window is closed.  
 
+
 ## Running the Application Locally  
-```
+bash```
 gunicorn --bind 127.0.0.1:8000 app:app  
 ```
 
