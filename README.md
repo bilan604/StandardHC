@@ -3,12 +3,17 @@
 ## Branches  
 <b>main</b>: The branch meant for GCP to track, running the live application.  
 
-staging: A middle-man branch used to test changes on GCP without overwriting the previous version before adding changes to main.  
+<b>staging</b>: A middle-man branch used to test changes on GCP without overwriting the previous version before adding changes to main.  
 
-development: Where local work should be done.  
+<b>development</b>: Where local work should be done.  
 
+## Google Cloud  
 
-## Before Running:  
+There is a linux virtual machine running on Google Cloud that hosts the application. I am accessing the VM by opening a bash terminal on my browser.  
+
+This application uses python's Flask library to handle backend web requests. It's launched using gunicorn because gunicorn was convenient to set up the SSL Certificate with.  
+
+## Before Running  
 If the current working directory is not StandardHC, then cd into it. Activate the virtual environment (VERY IMPORTANT).
 ```
 cd StandardHC  
@@ -20,13 +25,13 @@ source myenv/bin/activate
 -The '&' at the end tells the application to keep running even when the SSH terminal window is closed.  
 
 
-## Checking if the application is running on GCP:  
+## Check if the application is running on GCP  
 ```
 ps aux | grep python  
 ```
 
 
-## Killing the application if it is running on GCP:  
+## Kill the application if it is running on GCP  
 ```
 kill [process_id]
 ```
@@ -34,13 +39,13 @@ kill [process_id]
 The process_id should be a 3-5 digit numerical sequence for the application found by running `ps aux | grep python`  
 
 
-## Run the application locally:  
+## Run the application locally  
 ```
 gunicorn --bind 127.0.0.1:8000 app:app  
 ```
 
 
-## Run the application on GCP:  
+## Run the application on GCP  
 ```
 nohup gunicorn --bind 127.0.0.1:8000 app:app &  
 ```
