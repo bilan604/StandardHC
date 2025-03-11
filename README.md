@@ -7,26 +7,28 @@
 
 <b>development</b>: Where local work should be done.  
 
-## Google Cloud  
+## How The Project Was Set Up On Google Cloud  
 
-There is a linux virtual machine running on Google Cloud that hosts the application. I am accessing the VM by opening a bash terminal on my browser. This application uses python's Flask library to handle backend web requests. It's launched using gunicorn because gunicorn was convenient to set up the SSL Certificate with.  
+There is a linux virtual machine running on Google Cloud that hosts the application. I access the VM by opening a bash terminal on my browser (SSH-in-browser). This application uses python's Flask library to handle backend web requests, but it's launched using gunicorn because gunicorn was convenient to set up the SSL Certificate with.  
 
-#### GCP Dependencies (GCP Terminal Syntax)  
-#### Installed via sudo apt:
+#### Dependency: Installed via sudo apt (GCP Terminal Syntax):
 <b>git</b>: `sudo apt install git`  
 <b>python3</b>: `sudo apt install python3 python3-pip`  
 <b>pip</b>: Might need to install. Not sure  
 <b>nginx</b>: `sudo apt install python3-pip python3-venv nginx git`  
 
-#### Installed via pip:  
+Create the virtual environment and start it as soon as possible.
+<b>Creating</b>:`python3 -m venv myenv`  
+<b>Starting</b>:`source myenv/bin/activate`  
+
+#### Dependency: Installed via pip (GCP Terminal Syntax):  
+<b>NOTE</b>: Syntax requires being inside the virtual environement  
 `pip install flask gunicorn`  
 
 #### Requirements specific for nginx:  
 
-I believe first the address `http://127.0.0.1:8000` must be specified in GCP for the project/machine to be listened to.  
-
+0. I believe first the address `http://127.0.0.1:8000` must be specified in GCP for the project/machine to be listened to.  
 1. create file: `sudo nano /etc/nginx/sites-available/flaskapp`  
-
 2. file contents:  
 ```
 server {
@@ -42,17 +44,11 @@ server {
     }
 }
 ```  
-
 3. Do something to enable it: `sudo ln -s /etc/nginx/sites-available/flaskapp /etc/nginx/sites-enabled`  
-
 4. Restart to apply changes (Order uncertain): `sudo systemctl restart nginx`  
-
 5. GCP: Securing server with SSL (required for HTTPS): `sudo apt install certbot python3-certbot-nginx`  
-
 6. GCP: Go to GCP's Cloud Domain API dashboard, go to zones, and add an ‘A’ DNS record  
-
 7. Modify the GCP project/application's firewall settings to allow HTTP and HTTPS traffic (tcp:80, tcp:443)  
-
 8. Tell the flask app to run on http://127.0.0.1/8000 in `main.py`: `app.run(host=http://127.0.0.1/8000“)`  
 
 
