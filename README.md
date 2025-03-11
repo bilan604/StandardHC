@@ -7,7 +7,6 @@
 
 <b>development</b>: Where local work should be done.  
 
-
 ## How The Project Was Set Up On Google Cloud  
 
 There is a linux virtual machine running on Google Cloud that hosts the application. I access the VM by opening a bash terminal on my browser (SSH-in-browser). This application uses python's Flask library to handle backend web requests, but it's launched using gunicorn because gunicorn was convenient to set up the SSL Certificate with.  
@@ -52,41 +51,39 @@ server {
 8. Tell the flask app to run on http://127.0.0.1/8000 in `main.py`: `app.run(host=http://127.0.0.1/8000“)`  
 
 
-## Before Running  
-If the current working directory is not StandardHC, then cd into it. Activate the virtual environment (VERY IMPORTANT).
+## Running the Application on GCP  
+#### A) Before Running  
+If the current working directory is not StandardHC, then cd into it:  
 ```
 cd StandardHC  
-source myenv/bin/activate  
 ```
 
--`nohup` indicates where the logs are going to be stored (into a log file named `nohup.out`)  
-
--The `&` at the end tells the application to keep running even when the SSH terminal window is closed.  
-
-
-## Check if the application is running on GCP  
+Check if the application is running on GCP:  
 ```
 ps aux | grep python  
 ```
 
-
-## Kill the application if it is running on GCP  
+Kill the application if it is running on GCP:  
 ```
 kill [process_id]
 ```
-
 The process_id should be a 3-5 digit numerical sequence for the application found by running `ps aux | grep python`  
 
-
-## Run the application locally  
+Activate the virtual environment if on GCP (VERY IMPORTANT):  
 ```
-gunicorn --bind 127.0.0.1:8000 app:app  
+source myenv/bin/activate  
 ```
 
-
-## Run the application on GCP  
+Run the application:  
 ```
 nohup gunicorn --bind 127.0.0.1:8000 app:app &  
+```
+---->`nohup` indicates where the logs are going to be stored (into a log file named `nohup.out`)  
+---->The `&` at the end tells the application to keep running even when the SSH terminal window is closed.  
+
+#### B) Running the Application Locally  
+```
+gunicorn --bind 127.0.0.1:8000 app:app  
 ```
 
 
