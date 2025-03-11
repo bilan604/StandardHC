@@ -18,8 +18,8 @@ There is a linux virtual machine running on Google Cloud that hosts the applicat
 <b>nginx</b>: `sudo apt install python3-pip python3-venv nginx git`  
 
 <b>A Virtual Environment</b>: Create the virtual environment and start it as soon as possible.  
-----><b>Creating</b>:`python3 -m venv myenv`  
-----><b>Starting</b>:`source myenv/bin/activate`  
+--<b>Creating</b>:`python3 -m venv myenv`  
+--<b>Starting</b>:`source myenv/bin/activate`  
 
 #### Dependency: Installed via pip (GCP Terminal Syntax):  
 <b>NOTE</b>: Syntax requires being inside the virtual environement  
@@ -52,7 +52,6 @@ server {
 
 
 ## Running the Application on GCP  
-#### A) Before Running  
 If the current working directory is not StandardHC, then cd into it:  
 ```
 cd StandardHC  
@@ -78,10 +77,10 @@ Run the application:
 ```
 nohup gunicorn --bind 127.0.0.1:8000 app:app &  
 ```
----->`nohup` indicates where the logs are going to be stored (into a log file named `nohup.out`)  
----->The `&` at the end tells the application to keep running even when the SSH terminal window is closed.  
+--`nohup` indicates where the logs are going to be stored (into a log file named `nohup.out`)  
+--`&` at the end tells the application to keep running even when the SSH terminal window is closed.  
 
-#### B) Running the Application Locally  
+## Running the Application Locally  
 ```
 gunicorn --bind 127.0.0.1:8000 app:app  
 ```
@@ -94,6 +93,5 @@ source myenv/bin/activate
 gunicorn --bind 127.0.0.1:8000 app:app
 nohup gunicorn --bind 127.0.0.1:8000 app:app &  
 ```
-
 
 
