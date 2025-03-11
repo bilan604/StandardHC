@@ -47,13 +47,13 @@ server {
 
 4. Restart to apply changes (Order uncertain): `sudo systemctl restart nginx`  
 
-5. Securing server with SSL (required for HTTPS): `sudo apt install certbot python3-certbot-nginx`  
+5. GCP: Securing server with SSL (required for HTTPS): `sudo apt install certbot python3-certbot-nginx`  
 
-6. Go to GCP's Cloud Domain API dashboard, go to zones, and add an ‘A’ DNS record  
+6. GCP: Go to GCP's Cloud Domain API dashboard, go to zones, and add an ‘A’ DNS record  
 
-7. Modified project/application's firewall settings to allow HTTP and HTTPS traffic (tcp:80, tcp:443)  
+7. Modify the GCP project/application's firewall settings to allow HTTP and HTTPS traffic (tcp:80, tcp:443)  
 
-8. Hard-coded flask's app to run on http://127.0.0.1/8000: `app.run(host=http://127.0.0.1/8000“)`  
+8. Tell the flask app to run on http://127.0.0.1/8000 in `main.py`: `app.run(host=http://127.0.0.1/8000“)`  
 
 
 ## Before Running  
