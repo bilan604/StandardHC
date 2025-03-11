@@ -9,9 +9,7 @@
 
 ## Google Cloud  
 
-There is a linux virtual machine running on Google Cloud that hosts the application. I am accessing the VM by opening a bash terminal on my browser.  
-
-This application uses python's Flask library to handle backend web requests. It's launched using gunicorn because gunicorn was convenient to set up the SSL Certificate with.  
+There is a linux virtual machine running on Google Cloud that hosts the application. I am accessing the VM by opening a bash terminal on my browser. This application uses python's Flask library to handle backend web requests. It's launched using gunicorn because gunicorn was convenient to set up the SSL Certificate with.  
 
 ## Before Running  
 If the current working directory is not StandardHC, then cd into it. Activate the virtual environment (VERY IMPORTANT).
