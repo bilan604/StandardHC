@@ -82,7 +82,7 @@ nohup gunicorn --bind 127.0.0.1:8000 app:app &
 
 
 ## Running the Application Locally  
-bash```
+```
 gunicorn --bind 127.0.0.1:8000 app:app  
 ```
 
