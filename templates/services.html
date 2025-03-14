@@ -6,6 +6,7 @@
     <title>Managed Services - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="services.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
         * {
@@ -35,11 +36,6 @@
             top: 0;
             z-index: 1000;
         }
-
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
         
         .logo_image {
             position: absolute;
@@ -66,17 +62,9 @@
             font-weight: bold;
         }
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-            align-items: center;
-            padding: 120px 5%;
-        }
+
 
         .hero h1 {
-            font-size: 2.5rem;
             margin-top: 20px;
             margin-right: 20px;
         }
@@ -87,14 +75,8 @@
             border-radius: 20px;
         }
 
-        /* Section Styling */
-        .section {
-            padding: 50px 5%;
-        }
-
         .section h2 {
             margin-bottom: 20px;
-            font-size: 2rem;
             text-align: center;
         }
 
@@ -147,23 +129,12 @@
             color: white;
         }
 
-        /* Footer */
-        footer {
-            background: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
+        
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .hero {
                 flex-direction: column;
                 text-align: center;
-            }
-
-            .hero h1 {
-                margin-right: 0px;
             }
 
             .hero img {
@@ -180,11 +151,13 @@
         }
 
         @media (max-width: 600px) {
-          nav ul li a {
-            font-size: 0.8rem; /* Smaller font on narrow screens */
-          }
+            nav ul li a {
+                font-size: 0.8rem; /* Smaller font on narrow screens */
+            }
         }
+
     </style>
+    
 </head>
 <body>
 
@@ -204,7 +177,9 @@
     </header>
 
     <section class="hero">
-        <h1>Global Human Capital Solutions</h1>
+        <div class="hero-text">
+            <h1>Global Human Capital Solutions</h1>
+        </div>
         <img src="https://www.shutterstock.com/image-photo/asian-business-associates-meeting-street-600nw-1958236624.jpg" alt="Managed Services">
     </section>
 

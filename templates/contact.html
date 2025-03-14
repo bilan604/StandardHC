@@ -6,6 +6,7 @@
     <title>Contact - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="contact.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
         * {
@@ -36,11 +37,6 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        
         .logo_image {
             position: absolute;
             left: 0%;
@@ -66,15 +62,6 @@
             font-weight: bold;
         }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 100px 5% 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
         .hero-text {
             flex: 1;
         }
@@ -86,9 +73,6 @@
             border-radius: 10px;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-        }
 
         .cta-button {
             display: inline-block;
@@ -101,14 +85,9 @@
             border-radius: 5px;
         }
 
-        /* Global Headquarters Section */
-        .section {
-            padding: 50px 5%;
-        }
 
         .section h2 {
             margin-bottom: 20px;
-            font-size: 2rem;
         }
 
         .headquarters {
@@ -142,7 +121,7 @@
         /* Contact Form */
         .contact-form {
             background: #eaf0ff;
-            padding: 40px 5%;
+            padding: 30px 5%;
             text-align: center;
         }
 
@@ -186,16 +165,9 @@
             background: #0056b3;
         }
 
-        /* Footer */
-        footer {
-            background: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
+        
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .hero {
                 flex-direction: column;
             }
@@ -216,10 +188,11 @@
         }
 
         @media (max-width: 600px) {
-          nav ul li a {
-            font-size: 0.8rem; /* Smaller font on narrow screens */
-          }
-        }
+    nav ul li a {
+      font-size: 0.8rem; /* Smaller font on narrow screens */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -261,7 +234,7 @@
                 <p>201-7F Shiji Blvd, Lujiazui, Pudong, Shanghai, China</p>
 
                 <p><strong>Hong Kong</strong></p>
-                <p>Chinaweal Centre - 16C, Bowrington, Hong Kong</p>
+                <p>No.C, 16/F, Chinaweal CTR, 414-424 Jaffe RD, Wanchai, Hong Kong</p>
                 
                 <!-- <p>Email: <a href="mailto:info@standardHC.com">info@standardHC.com</a></p> -->
                 <!-- <p>Contact Number: +852 1234 5678</p> -->
