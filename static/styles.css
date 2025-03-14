@@ -62,8 +62,7 @@ footer {
 
 @media (max-width: 600px) {
     .hero {
-        
-        padding: 60px 5% 40px 5%;
+        padding: 100px 5% 40px 5%;
     }
 }
 
