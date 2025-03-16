@@ -6,7 +6,6 @@
     <title>About Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="about.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
         * {
@@ -22,6 +21,59 @@
             line-height: 1.6;
         }
 
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-size: 2vw;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.logo {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 120px 5% 60px 5%;
+    background: #007BFF;
+    color: white;
+}
+
+h1 {
+    font-size: 4vw;
+    font-size: clamp(30px, 4vw, 60px);
+    /* font-size: clamp(30px, 3vw, 50px); */
+    margin-top: 20px;
+    margin-right: 20px;
+    /*transform: translate(0%, -50%);*/
+
+}
+
+/* Section Styling */
+.section {
+    padding: 25px 5%;
+}
+
+h2 {
+    font-size: 3.5vw;
+    font-size: clamp(25px, 3vw, 30px);
+}
+
+h3 {
+    font-size: 3vw;
+    font-size: clamp(20px, 3vw, 25px);
+}
+
         /* Header */
         header {
             display: flex;
@@ -29,7 +81,7 @@
             align-items: center;
             padding: 15px 5%;
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             position: fixed;
             height: 12vh;
             width: 100%;
@@ -66,7 +118,7 @@
         .hero img {
             width: 50%;
             max-width: 500%;
-            border-radius: 20px;
+            
         }
 
 
@@ -174,6 +226,21 @@
     }
 }
 
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 100px 5% 40px 5%;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -212,15 +279,21 @@
         <div class="commitment">
             
             <div>
-                <h3>✔ Foreign Enterprise Localization</h3>
+                <div style="padding-bottom: 5px;">
+                    <h3>✔ Foreign Enterprise Localization</h3>
+                </div>
                 We help foreign enterprises in China find local talent, achieve true localization, and seize the enormous opportunities present in the Asian market.
             </div>
             <div>
-                <h3>✔ Asian Enterprise Globalization</h3>
+                <div style="padding-bottom: 5px;">
+                    <h3>✔ Asian Enterprise Globalization</h3>
+                </div>
                 We bring in talent with international perspectives and practical experience for domestic enterprises, enabling Asian companies to implement global strategies and navigate cross-border expansion.
             </div>
             <div>
-                <h3>✔ Unicorn Company Business Partnerships</h3>
+                <div style="padding-bottom: 5px;"></div>
+                    <h3>✔ Unicorn Company Business Partnerships</h3>
+                </div>
                 We act as strategic business partners for startups, accelerating their growth and creating value to help them become unicorns for the future.
             </div>
         </div>

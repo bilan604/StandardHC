@@ -6,7 +6,7 @@
     <title>SHC - Talent Solutions</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
     <style>
         /* Global Reset */
         * {
@@ -24,6 +24,49 @@
             overflow-y: scroll;
         }
 
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+        font-size: 2vw;
+        font-size: clamp(16px, 2vw, 20px);
+    }
+
+    .logo {
+        font-size: 2vw;
+        font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        padding: 120px 5% 60px 5%;
+        background: #007BFF;
+        color: white;
+    }
+
+    h1 {
+        font-size: 4vw;
+        font-size: clamp(30px, 4vw, 60px);
+        /* font-size: clamp(30px, 3vw, 50px); */
+        margin-top: 20px;
+        margin-right: 20px;
+        /*transform: translate(0%, -50%);*/
+
+    }
+
+    /* Section Styling */
+    .section {
+        padding: 25px 5%;
+    }       
         /* Header */
         header {
             display: flex;
@@ -31,7 +74,7 @@
             align-items: center;
             padding: 15px 5%;
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             position: fixed;
             height: 12vh;
             width: 100%;
@@ -50,7 +93,8 @@
         }
 
         #main-image {
-            border-radius: 20px;
+            
+            /* border-radius: 20px; */
         }
 
         nav ul {
@@ -77,22 +121,30 @@
 
         /* Services Section */
         .services {
-            display: flex;
-            justify-content: center;
-            text-align: center;
             padding: 30px 5%;
         }
 
-        .services div {
-            flex: 1;
-            margin: 10px;
+        .services h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .service-box {
             padding: 20px;
             background: #f5f5f5;
             border-radius: 10px;
             transition: 0.3s;
         }
 
-        .services div:hover {
+        .service-box:hover {
             background: #007BFF;
             color: white;
         }
@@ -128,23 +180,53 @@
             border-radius: 10px;
         }
 
+        /* Section Titles */
+        .services-title, .features-title, .trusted-companies-title {
+            text-align: left;
+            padding: 20px 5% 0px 5%;
+        }
+
         /* Trusted Companies */
         .trusted-companies {
             text-align: center;
             padding: 30px 5%;
+            width: 100%;
+        }
+
+        .trusted-companies-description {
+            width: 80%;
+            margin: 0 auto 40px auto;
+            padding: 20px;
+            text-align: center;
+            background: #f5f5f5;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .trusted-companies-description:hover {
+            background: #007BFF;
+            color: white;
         }
 
         .company-logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 40px;  /* Add space between rows */
         }
 
         .company-logos img {
-            max-width: 130px;
-            height: auto;
-            border-radius: 10px;
+            width: 100%;
+            aspect-ratio: 4/3;
+            border: 1px solid #666;  /* Lighter border */
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .services-title, .features-title, .trusted-companies-title {
+            /* transform: translate(10vh, 5vh); */
         }
 
         /* Responsive */
@@ -160,11 +242,20 @@
 
             .services {
                 flex-direction: column;
+                width: 90%;
+            }
+
+            .trusted-companies-description {
+                width: 90%;
+                margin: 0 auto 30px auto;
+                text-align: center;
             }
 
             .company-logos {
-                flex-direction: column;
-                align-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 90%;
+                margin-bottom: 30px;
             }
         }
 
@@ -172,6 +263,68 @@
     nav ul li a {
       font-size: 0.8rem; /* Smaller font on narrow screens */
     }
+}
+
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 100px 5% 40px 5%;
+    }
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #eaf0ff;
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
 }
 
 
@@ -203,35 +356,68 @@
         <img id="main-image" src="https://media.istockphoto.com/id/174776170/photo/blue-manhattan-skyscapers-wall-street-new-york-city.jpg?s=612x612&w=0&k=20&c=9r5p7ujfzv98knm8jgWAhXugoKuAtkKaYasKmVKlMkg=" alt="Business meeting">
     </section>
 
+    <div class="services-title">
+        <h2>What We Do</h2>
+    </div>
     <section class="services">
-
-        <div>
-            <h3>Executive Search</h3>
-            We provide high-level talent search services, specializing in financial, technology, and fintech industries. Our expertise ensures top-tier talent for leadership and executive roles.
-        </div>
-        <div>
-            <h3>Talent Acquisition</h3>
-            Our recruitment solutions help businesses secure international professionals with the right experience, bridging talent gaps in finance, technology, and innovation sectors.
-        </div>
-        <div>
-            <h3>Industry Mapping</h3>
-            We analyze industry trends, job markets, and business structures to provide clients with valuable insights into workforce distribution, competition, and hiring strategies.
+        <div class="services-grid">
+            <div class="service-box">
+                <div style="padding-bottom: 5px;">
+                    <h3>Executive Search</h3>
+                </div>
+                We provide high-level talent search services, specializing in financial, technology, and fintech industries. Our expertise ensures top-tier talent for leadership and executive roles.
+            </div>
+            <div class="service-box">
+                <div style="padding-bottom: 5px;">
+                    <h3>Talent Acquisition</h3>
+                </div>
+                Our recruitment solutions help businesses secure international professionals with the right experience, bridging talent gaps in finance, technology, and innovation sectors.
+            </div>
+            <div class="service-box">
+                <div style="padding-bottom: 5px;">
+                    <h3>Industry Mapping</h3>
+                </div>
+                We analyze industry trends, job markets, and business structures to provide clients with valuable insights into workforce distribution, competition, and hiring strategies.
+            </div>
         </div>
     </section>
 
+    <div class="features-title">
+        <h2>What Sets Standard Human Capital Apart?</h2>
+    </div>
     <section class="features">
-        <h2>What Sets Standard HC Apart?</h2>
         <div class="feature-grid">
-            <div class="feature-box"><h3>Full Mapping</h3> We provide personalized solutions for clients by mapping out their industry, business operations, and job requirements for in-depth searches.</div>
-            <div class="feature-box"><h3>Full Assistance Until Onboarding</h3> From talent sourcing to background checks and interviews, we're there every step of the way.</div>
-            <div class="feature-box"><h3>Globalization & Localization</h3> We help Asian enterprises expand internationally while supporting foreign businesses in navigating the Asian market with local talent.</div>
+            <div class="feature-box">
+                <div style="padding-bottom: 5px;">
+                    <h3>Full Mapping</h3>
+                </div>
+                We provide personalized solutions for clients by mapping out their industry, business operations, and job requirements for in-depth searches.
+            </div>
+            <div class="feature-box">
+                <div style="padding-bottom: 5px;">
+                    <h3>Full Assistance Until Onboarding</h3>
+                </div>
+                From talent sourcing to background checks and interviews, we're there every step of the way.
+            </div>
+            <div class="feature-box">
+                <div style="padding-bottom: 5px;">
+                    <h3>Globalization & Localization</h3>
+                </div>
+                We help Asian enterprises expand internationally while supporting foreign businesses in navigating the Asian market with local talent.
+            </div>
         </div>
     </section>
 
+    <div class="trusted-companies-title">
+        <h2>Some of the Companies We Partner With</h2>
+    </div>
     <section class="trusted-companies">
-        <h3>Our Clients</h3>
+        <div class="trusted-companies-description">
+            <p>We have worked with a wide range of clients distributed across technology, banking, asset management, and fin-tech industries, from startups to established enterprises, across various industries. Our clients trust us to deliver top-tier talent and innovative solutions that drive their success.</p>
+        </div>
+        
         <div class="company-logos">
-            <img src="https://logos-world.net/wp-content/uploads/2024/07/Tencent-Symbol.png" alt="Tencent">
+            <img src="https://images.squarespace-cdn.com/content/v1/5d0d78911f2ac70001401b6b/1566958591717-NSXZQJU4RJU4QLRIUQLR/tencent.png" alt="Tencent">
             <img src="https://brandlogos.net/wp-content/uploads/2021/10/alibaba-logo.png" alt="Alibaba">
             <img src="https://iabtechlab.com/wp-content/uploads/2018/11/bytedance-logo-jpg-03.jpg" alt="Bytedance">
             <img src="https://cdn-images-1.medium.com/max/1200/1*kZrcTfL7P3DxzzcUQ-QUSg.png" alt="Ant Financial">
@@ -244,6 +430,36 @@
             <img src="https://icons.veryicon.com/png/o/business/bank-logo-collection/china-citic-bank-portfolio.png" alt="China Citic Bank">
         </div>
             
+    </section>
+
+    <section class="contact-form" id="contact-form">
+        <h2>Leave A Message</h2>
+        <form method="POST" action="/contact" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="first_name" placeholder="First Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="last_name" placeholder="Last Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone_number" placeholder="Phone Number *" required>
+            </div>
+            <div class="form-group">
+                <select required name="service_interested">
+                    <option value="">Category *</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Service Request">Service Request</option>
+                    <option value="Careers at SHC">Careers at SHC</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message *" name="your_message" required></textarea>
+            </div>
+            <input type="submit" name="contact_button" class="submit-btn" value="Send">
+        </form>
     </section>
 
     <footer>

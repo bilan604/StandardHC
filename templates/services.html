@@ -6,7 +6,7 @@
     <title>Managed Services - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="services.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
     <style>
         /* Global Styles */
         * {
@@ -22,6 +22,59 @@
             line-height: 1.6;
         }
 
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-size: 2vw;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.logo {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 120px 5% 60px 5%;
+    background: #007BFF;
+    color: white;
+}
+
+h1 {
+    font-size: 4vw;
+    font-size: clamp(30px, 4vw, 60px);
+    /* font-size: clamp(30px, 3vw, 50px); */
+    margin-top: 20px;
+    margin-right: 20px;
+    /*transform: translate(0%, -50%);*/
+
+}
+
+/* Section Styling */
+.section {
+    padding: 25px 5%;
+}
+
+h2 {
+    font-size: 3.5vw;
+    font-size: clamp(25px, 3vw, 30px);
+}
+
+h3 {
+    font-size: 3vw;
+    font-size: clamp(20px, 3vw, 25px);
+}
+
         /* Header */
         header {
             display: flex;
@@ -29,7 +82,7 @@
             align-items: center;
             padding: 15px 5%;
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             position: fixed;
             height: 12vh;
             width: 100%;
@@ -41,7 +94,7 @@
             position: absolute;
             left: 0%;
             top: 0%;
-            height: 80%;  /* 80% of the parent’s height */
+            height: 80%;  /* 80% of the parent's height */
             min-height: 80%;
             max-height: 80%;
             transform: translate(10%, 10%);
@@ -72,7 +125,7 @@
         .hero img {
             width: 50%;
             max-width: 500%;
-            border-radius: 20px;
+            
         }
 
         .section h2 {
@@ -100,7 +153,6 @@
             display: flex;
             align-items: flex-start;
             background: #f5f5f5;
-            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
             transition: 0.3s;
@@ -114,6 +166,7 @@
 
         .solution-content {
             flex: 1;
+            padding: 10px;
         }
 
         .solution-content h3 {
@@ -156,6 +209,21 @@
             }
         }
 
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 100px 5% 40px 5%;
+    }
+}
+
     </style>
     
 </head>
@@ -196,7 +264,9 @@
         <div class="solution">
             <img src="https://cdn1.iconfinder.com/data/icons/content-10/24/user-document-checked-512.png" alt="RPO">
             <div class="solution-content">
-                <h3>Executive Search</h3>
+                <div style="padding-bottom: 5px;">
+                    <h3>Executive Search</h3>
+                </div>
                 <p>We provide specialized recruitment focused on identifying, attracting, and hiring top-level executives, senior managers, and other high-impact people for global businesses.</p>
                 <ul>
                     <li>We provide complete confidentiality for our clients, candidates, and information pertaining to sensitive leadership transitions.</li>
@@ -209,7 +279,9 @@
         <div class="solution">
             <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
             <div class="solution-content">
-                <h3>Talent Acquisition</h3>
+                <div style="padding-bottom: 5px;">
+                    <h3>Talent Acquisition</h3>
+                </div>
                 <p>We conduct comprehensive and in-depth searches, screening precisely and recommending potential candidates for target roles.</p>
                 <ul>
                     <li>We integrate with business operations to accurately grasp job requirements.</li>
@@ -222,7 +294,9 @@
         <div class="solution">
             <img src="https://cdn0.iconfinder.com/data/icons/documents-27/32/check-512.png" alt="HR">
             <div class="solution-content">
-                <h3>Impact</h3>
+                <div style="padding-bottom: 5px;">
+                    <h3>Impact</h3>
+                </div>
                 <p>We help foreign enterprises localize into the Asian market, local enterprise globalize into foreign markets, and unicorns accelerate their growth through executive search and talent acquisition.</p>
                 <ul>
                     <li>We focus on on placing leaders who will drive growth, innovation, and transformation within the organization.</li>
