@@ -6,7 +6,7 @@
     <title>Managed Services - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="services.js"></script>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
         * {
@@ -56,7 +56,7 @@ h1 {
     /* font-size: clamp(30px, 3vw, 50px); */
     margin-top: 20px;
     margin-right: 20px;
-    /*transform: translate(0%, -50%);*/
+    transform: translate(0%, -10%);
 
 }
 
@@ -138,7 +138,7 @@ h3 {
             margin: 0 auto;
             text-align: center;
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 0px;
             transition: 0.3s;
             
         }
@@ -146,6 +146,7 @@ h3 {
         .text-content:hover {
             background: #007BFF;
             color: white;
+            transform: translate(-10%, 0%);
         }
 
         /* HR Solutions */
@@ -153,7 +154,7 @@ h3 {
             display: flex;
             align-items: flex-start;
             background: #f5f5f5;
-            border-radius: 10px;
+            border-radius: 0px;
             margin-bottom: 20px;
             transition: 0.3s;
         }
@@ -180,8 +181,13 @@ h3 {
         .solution:hover {
             background: #007BFF;
             color: white;
+            transform: translate(-10%, 0%);
         }
 
+        .section-title {
+            text-align: left;
+            padding: 20px 5% 0px 5%;
+        }
         
         /* Responsive */
         @media (max-width: 600px) {
@@ -224,6 +230,90 @@ footer {
     }
 }
 
+        /* Core Business Section */
+        .core-business {
+            padding: 30px 5%;
+        }
+
+        .core-business h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .core-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .core-box {
+            padding: 20px 40px 20px 40px;
+            background: #f5f5f5;
+            border-radius: 0px;
+            transition: 0.3s;
+        }
+
+        .core-box:hover {
+            background: #007BFF;
+            color: white;
+            transform: translate(-10%, 0%);
+        }
+
+        .core-box img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background: #eaf0ff;
+            padding: 30px 5%;
+            text-align: center;
+        }
+
+        .contact-form form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+
     </style>
     
 </head>
@@ -251,19 +341,22 @@ footer {
         <img src="https://www.shutterstock.com/image-photo/asian-business-associates-meeting-street-600nw-1958236624.jpg" alt="Managed Services">
     </section>
 
-    <section class="section">
+    <div class="section-title">
         <h2>Strategic Talent Solutions</h2>
+    </div>
+    <section class="section">
         <p class="text-content">
             Standard Human Capital is a human capital company specializing in cross-border talent services. We partner with established enterprises, helping them scale through executive search and strategic talent acquisition. We facilitate business with both both globalization and localization expansions by finding the right engineers and executives for the new roles.
         </p>
     </section>
 
-    <section class="section">
+    <div class="section-title">
         <h2>Core Business</h2>
-
-        <div class="solution">
-            <img src="https://cdn1.iconfinder.com/data/icons/content-10/24/user-document-checked-512.png" alt="RPO">
-            <div class="solution-content">
+    </div>
+    <section class="section">
+        <div class="core-grid">
+            <div class="core-box">
+                <img src="https://cdn1.iconfinder.com/data/icons/content-10/24/user-document-checked-512.png" alt="RPO">
                 <div style="padding-bottom: 5px;">
                     <h3>Executive Search</h3>
                 </div>
@@ -274,11 +367,8 @@ footer {
                     <li>We work closely with our clients and our expertise in technology and finance to place candidates with technical and cultural alignment.</li>
                 </ul>
             </div>
-        </div>
-
-        <div class="solution">
-            <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
-            <div class="solution-content">
+            <div class="core-box">
+                <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
                 <div style="padding-bottom: 5px;">
                     <h3>Talent Acquisition</h3>
                 </div>
@@ -289,11 +379,8 @@ footer {
                     <li>We leverage multiple public and proprietary professional channels to find candidates of the best fit.</li>
                 </ul>
             </div>
-        </div>
-
-        <div class="solution">
-            <img src="https://cdn0.iconfinder.com/data/icons/documents-27/32/check-512.png" alt="HR">
-            <div class="solution-content">
+            <div class="core-box">
+                <img src="https://cdn0.iconfinder.com/data/icons/documents-27/32/check-512.png" alt="HR">
                 <div style="padding-bottom: 5px;">
                     <h3>Impact</h3>
                 </div>
@@ -304,7 +391,36 @@ footer {
                 </ul>
             </div>
         </div>
+    </section>
 
+    <section class="contact-form" id="contact-form">
+        <h2>Leave A Message</h2>
+        <form method="POST" action="/contact" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="first_name" placeholder="First Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="last_name" placeholder="Last Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone_number" placeholder="Phone Number *" required>
+            </div>
+            <div class="form-group">
+                <select required name="service_interested">
+                    <option value="">Category *</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Service Request">Service Request</option>
+                    <option value="Careers at SHC">Careers at SHC</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message *" name="your_message" required></textarea>
+            </div>
+            <input type="submit" name="contact_button" class="submit-btn" value="Send">
+        </form>
     </section>
 
     <footer>

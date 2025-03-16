@@ -6,7 +6,7 @@
     <title>Contact - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="contact.js"></script>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
         * {
@@ -135,6 +135,7 @@ h3 {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            border-radius: 5px;
             
         }
 
@@ -168,6 +169,10 @@ h3 {
         .contact-info a {
             color: #007BFF;
             text-decoration: none;
+        }
+
+        .contact-info-item {
+            padding: 0px 0px 5px 0px;
         }
 
         /* Contact Form */
@@ -293,21 +298,28 @@ footer {
         <div class="headquarters">
             <img src="https://images.squarespace-cdn.com/content/v1/569faa8225981d7d092fd97e/1483476522100-LVYFOIC8AW5FCAX2T3O7/625+Adams+Dusk_web.jpg" alt="Headquarters">
             <div class="contact-info">
+                <div class="contact-info-item">
+                    <p><strong>Chicago</strong></p>
+                    <p>625-19F W Adams St, Chicago</p>
+                </div>
                 
-                <p><strong>Chicago</strong></p>
-                <p>625-19F W Adams St, Chicago</p>
-
-                <p><strong>Shanghai</strong></p>
-                <p>7th Floor, Standard Chartered Bank Tower, No. 201 Century Avenue, Shanghai</p>
-
-                <p><strong>Hong Kong</strong></p>
-                <p>No.C, 16/F, Chinaweal CTR, 414-424 Jaffe RD, Hong Kong</p>
+                <div class="contact-info-item">
+                    <p><strong>Shanghai</strong></p>
+                    <p>7th Floor, Standard Chartered Bank Tower, No. 201 Century Avenue, Shanghai</p>
+                </div>
                 
+                <div class="contact-info-item">
+                    <p><strong>Hong Kong</strong></p>
+                    <p>No.C, 16/F, Chinaweal CTR, 414-424 Jaffe RD, Hong Kong</p>                
+                </div>
+
                 <!-- <p>Email: <a href="mailto:info@standardHC.com">info@standardHC.com</a></p> -->
                 <!-- <p>Contact Number: +852 1234 5678</p> -->
+                <div class="contact-info-item">
+                    <p><strong>Website</strong></p>
+                    <p><a href="https://www.standard-hc.com">WWW.STANDARD-HC.COM</a></p>
+                </div>
                 
-                <p><strong>Website</strong></p>
-                <p><a href="https://www.standard-hc.com">WWW.STANDARD-HC.COM</a></p>
             </div>
         </div>
     </section>

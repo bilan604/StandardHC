@@ -6,6 +6,7 @@
     <title>About Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="about.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
         * {
@@ -55,7 +56,7 @@ h1 {
     /* font-size: clamp(30px, 3vw, 50px); */
     margin-top: 20px;
     margin-right: 20px;
-    /*transform: translate(0%, -50%);*/
+    transform: translate(0%, -10%);
 
 }
 
@@ -132,7 +133,7 @@ h3 {
             margin: 0 auto;
             text-align: center;
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 0px;
             transition: 0.3s;
             
         }
@@ -140,27 +141,43 @@ h3 {
         .history-text:hover {
             background: #007BFF;
             color: white;
+            transform: translate(-10%, 0%);
         }
 
         /* Commitment Section */
         .commitment {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            padding: 30px 5%;
         }
 
-        .commitment div {
-            flex: 1;
-            min-width: 300px;
-            background: #f5f5f5;
+        .commitment h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .commitment-box {
             padding: 20px;
-            border-radius: 10px;
+            background: #f5f5f5;
+            border-radius: 0px;
             transition: 0.3s;
         }
 
-        .commitment div:hover {
+        .commitment-box:hover {
             background: #007BFF;
             color: white;
+            transform: translate(-10%, 0%);
+        }
+
+        .section-title {
+            text-align: left;
+            padding: 20px 5% 0px 5%;
         }
 
         /* Leadership Team */
@@ -175,14 +192,14 @@ h3 {
         .team-member {
             padding: 20px;
             background: #f5f5f5;
-            border-radius: 10px;
+            border-radius: 0px;
         }
 
         .team-member img {
             width: 100px;
             height: 100px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 0%;
             margin-bottom: 10px;
         }
 
@@ -241,6 +258,82 @@ footer {
     }
 }
 
+        /* Contact Form Styles */
+        .contact-form {
+            background: #eaf0ff;
+            padding: 30px 5%;
+            text-align: center;
+        }
+
+        .contact-form form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+
+        .history-box {
+            padding: 10px 20px 10px 20px;
+            margin: 20px 0;
+            background: #f5f5f5;
+            border-radius: 0px;
+            transition: 0.3s;
+            width: 80%;
+            text-align: center;
+            transform: translate(10%, 0%);
+        }
+
+        .history-box:hover {
+            background: #007BFF;
+            color: white;
+            transform: translate(0%, 0%);
+            
+        }
+
+        .history-box h2 {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .section h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007BFF;
+        }
+
     </style>
 </head>
 <body>
@@ -267,35 +360,62 @@ footer {
         <img src="https://s35891.pcdn.co/wp-content/uploads/LAN_B37_01.jpg.optimal.jpg" alt="Business Meeting">
     </section>
 
+    <div class="section-title">
+        <h2 class="section-label">Summary</h2>
+    </div>
     <section class="section">
-        <h2 class="section-label">Our History</h2>
         <p class="history-text">
             Founded in 1994, Standard Human Capital began by providing high-level talent search services for Fortune 500 companies entering and operating in China. Over the years, we have grown into a human capital company with rich experience and outstanding strength in cross-border talent services, specializing in the finance, technology, and fintech industries. 
         </p>
     </section>
 
-    <section class="section">
+    <div class="section-title">
         <h2>Our Commitment to Globalization & Talent Solutions</h2>
-        <div class="commitment">
-            
-            <div>
+    </div>
+    <section class="section">
+        <div class="commitment-grid">
+            <div class="commitment-box">
                 <div style="padding-bottom: 5px;">
                     <h3>✔ Foreign Enterprise Localization</h3>
                 </div>
-                We help foreign enterprises in China find local talent, achieve true localization, and seize the enormous opportunities present in the Asian market.
+                <p>We help foreign enterprises in China find local talent, achieve true localization, and seize the enormous opportunities present in the Asian market.</p>
             </div>
-            <div>
+            <div class="commitment-box">
                 <div style="padding-bottom: 5px;">
                     <h3>✔ Asian Enterprise Globalization</h3>
                 </div>
-                We bring in talent with international perspectives and practical experience for domestic enterprises, enabling Asian companies to implement global strategies and navigate cross-border expansion.
+                <p>We bring in talent with international perspectives and practical experience for domestic enterprises, enabling Asian companies to implement global strategies and navigate cross-border expansion.</p>
             </div>
-            <div>
-                <div style="padding-bottom: 5px;"></div>
+            <div class="commitment-box">
+                <div style="padding-bottom: 5px;">
                     <h3>✔ Unicorn Company Business Partnerships</h3>
                 </div>
-                We act as strategic business partners for startups, accelerating their growth and creating value to help them become unicorns for the future.
+                <p>We act as strategic business partners for startups, accelerating their growth and creating value to help them become unicorns for the future.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1>Corporate History</h1>
+        
+        <div class="history-box">
+            <h2>Early PRC Period - Localization and Talent Search</h2>
+            <p>In the early days of China's reform and opening up, we focused on helping Fortune 500 companies find local talent for their China operations. This period was marked by significant contributions to the localization of foreign enterprises in China.</p>
+        </div>
+
+        <div class="history-box">
+            <h2>2000s - Supporting Chinese Companies Going Global</h2>
+            <p>As Chinese companies began their international expansion, we pivoted to assist them in finding international talent. Our expertise in cross-cultural recruitment became invaluable for companies seeking to establish a global presence.</p>
+        </div>
+
+        <div class="history-box">
+            <h2>2010s - Tech Industry Focus</h2>
+            <p>With the rise of China's tech sector, we specialized in recruiting for technology and fintech companies. Our deep understanding of both traditional and emerging industries allowed us to bridge talent gaps effectively.</p>
+        </div>
+
+        <div class="history-box">
+            <h2>Present Day - Global Human Capital Solutions</h2>
+            <p>Today, we operate as a comprehensive human capital solutions provider, serving both multinational corporations and emerging unicorns. Our services span executive search, talent acquisition, and strategic HR consulting across global markets.</p>
         </div>
     </section>
 
@@ -323,6 +443,36 @@ footer {
     </section>
 
     -->
+
+    <section class="contact-form" id="contact-form">
+        <h2>Leave A Message</h2>
+        <form method="POST" action="/contact" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="first_name" placeholder="First Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="last_name" placeholder="Last Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone_number" placeholder="Phone Number *" required>
+            </div>
+            <div class="form-group">
+                <select required name="service_interested">
+                    <option value="">Category *</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Service Request">Service Request</option>
+                    <option value="Careers at SHC">Careers at SHC</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message *" name="your_message" required></textarea>
+            </div>
+            <input type="submit" name="contact_button" class="submit-btn" value="Send">
+        </form>
+    </section>
 
     <footer>
         &copy; 2025 Standard Human Capital - All Rights Reserved

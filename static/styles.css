@@ -1,42 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    font-size: 2vw;
-    font-size: clamp(16px, 2vw, 20px);
-}
-
-.logo {
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    padding: 120px 5% 60px 5%;
-}
 
 h1 {
     font-size: 4vw;
     font-size: clamp(30px, 4vw, 60px);
-    /* font-size: clamp(30px, 3vw, 50px); */
-    margin-top: 20px;
-    margin-right: 20px;
-    /*transform: translate(0%, -50%);*/
 
-}
-
-/* Section Styling */
-.section {
-    padding: 25px 5%;
 }
 
 h2 {
@@ -48,24 +14,4 @@ h3 {
     font-size: 3vw;
     font-size: clamp(20px, 3vw, 25px);
 }
-
-
-
-
-/* Footer */
-footer {
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-@media (max-width: 600px) {
-    .hero {
-        padding: 100px 5% 40px 5%;
-    }
-}
-
-
-
 
