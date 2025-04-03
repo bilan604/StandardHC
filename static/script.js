@@ -3,19 +3,19 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Script Loaded");
 
-    let navLinks = document.querySelectorAll("nav ul li a");
-    navLinks.forEach(link => {
-        link.addEventListener("mouseover", function() {
-            this.style.color = "#007bff";
-        });
-        link.addEventListener("mouseout", function() {
-            this.style.color = "black";
-        });
-    });
+    const twitterBtn = document.querySelector('.footer-twitter-btn');
+    const linkedinBtn = document.querySelector('.footer-linkedin-btn');
 
-    let heroText = document.querySelector(".hero-text h2");
-    heroText.addEventListener("click", function() {
-        alert("Welcome to SHC!");
-    });
+    if (twitterBtn) {
+        twitterBtn.addEventListener('click', function () {
+            window.open('https://x.com/STANDARD_H_C', '_blank');
+        });
+    }
+
+    if (linkedinBtn) {
+        linkedinBtn.addEventListener('click', function () {
+            window.open('https://www.linkedin.com/company/standard-huamn-capital', '_blank');
+        });
+    }
+    
 });
-

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Managed Services - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
-    <script defer src="services.js"></script>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         body {
@@ -23,10 +23,10 @@
         }
 
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -39,17 +39,6 @@ body {
     font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    padding: 120px 5% 60px 5%;
-    background: #007BFF;
-    color: white;
-}
-
 h1 {
     font-size: 4vw;
     font-size: clamp(30px, 4vw, 60px);
@@ -59,6 +48,44 @@ h1 {
     transform: translate(0%, -10%);
 
 }
+
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: calc(80vh); /* Subtracting header height */
+        background-image: url('{{ url_for('static', filename='images/services/hero.png') }}');
+        background-size: cover; /* Makes sure image fills entire container */
+        background-position: center; /* Centers image */
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10vw;
+    transform: translateY(-50%);
+    width: 40vw;
+    background-color: #001F54; /* Dark Blue */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+    .hero-overlay h1 {
+        font-size: clamp(30px, 4vw, 60px);
+        font-weight: bold;
+    }
+
+
+
 
 /* Section Styling */
 .section {
@@ -117,16 +144,6 @@ h3 {
 
 
 
-        .hero h1 {
-            margin-top: 20px;
-            margin-right: 20px;
-        }
-
-        .hero img {
-            width: 50%;
-            max-width: 500%;
-            
-        }
 
         .section h2 {
             margin-bottom: 20px;
@@ -140,20 +157,15 @@ h3 {
             padding: 30px;
             border-radius: 0px;
             transition: 0.3s;
-            
-        }
-
-        .text-content:hover {
-            background: #007BFF;
-            color: white;
-            transform: translate(-10%, 0%);
+            color: black;
         }
 
         /* HR Solutions */
         .solution {
             display: flex;
             align-items: flex-start;
-            background: #f5f5f5;
+            background: rgb(210, 210, 210);
+            color: black;
             border-radius: 0px;
             margin-bottom: 20px;
             transition: 0.3s;
@@ -196,10 +208,6 @@ h3 {
                 text-align: center;
             }
 
-            .hero img {
-                width: 100%;
-            }
-
             .solution {
                 flex-direction: column;
             }
@@ -209,20 +217,59 @@ h3 {
             }
         }
 
+
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* or any background color */
+    color: white;
+    padding: 15px 5%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+}
+
+.footer-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-btns div {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Specific icons */
+.footer-twitter-btn {
+    background-image: url('{{ url_for("static", filename="images/generic/twitter.png") }}');
+}
+
+.footer-linkedin-btn {
+    background-image: url('{{ url_for("static", filename="images/generic/linkedin.png") }}');
+}
+
+
+
         @media (max-width: 600px) {
             nav ul li a {
                 font-size: 0.8rem; /* Smaller font on narrow screens */
             }
         }
 
-
-/* Footer */
-footer {
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
 
 @media (max-width: 600px) {
     .hero {
@@ -250,7 +297,8 @@ footer {
 
         .core-box {
             padding: 20px 40px 20px 40px;
-            background: #f5f5f5;
+            background: rgb(210, 210, 210);
+            color: black;
             border-radius: 0px;
             transition: 0.3s;
         }
@@ -335,11 +383,11 @@ footer {
     </header>
 
     <section class="hero">
-        <div class="hero-text">
+        <div class="hero-overlay">
             <h1>Global Human Capital Solutions</h1>
+            We provide cross-border executive talent search, project management, and impact assessment services to help American and Asian businesses succeed.
         </div>
-        <img src="https://www.shutterstock.com/image-photo/asian-business-associates-meeting-street-600nw-1958236624.jpg" alt="Managed Services">
-    </section>
+     </section>
 
     <div class="section-title">
         <h2>Strategic Talent Solutions</h2>
@@ -358,14 +406,16 @@ footer {
             <div class="core-box">
                 <img src="https://cdn1.iconfinder.com/data/icons/content-10/24/user-document-checked-512.png" alt="RPO">
                 <div style="padding-bottom: 5px;">
-                    <h3>Executive Search</h3>
+                    <h3>Cross-Border Executive Search</h3>
                 </div>
                 <p>We provide specialized recruitment focused on identifying, attracting, and hiring top-level executives, senior managers, and other high-impact people for global businesses.</p>
+                <!--
                 <ul>
                     <li>We provide complete confidentiality for our clients, candidates, and information pertaining to sensitive leadership transitions.</li>
                     <li>We proactively seek out highly qualified candidates, including candidates that are currently employed within other companies of the client's industry.</li>
                     <li>We work closely with our clients and our expertise in technology and finance to place candidates with technical and cultural alignment.</li>
                 </ul>
+                -->
             </div>
             <div class="core-box">
                 <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
@@ -373,12 +423,52 @@ footer {
                     <h3>Talent Acquisition</h3>
                 </div>
                 <p>We conduct comprehensive and in-depth searches, screening precisely and recommending potential candidates for target roles.</p>
+                <!--
                 <ul>
                     <li>We integrate with business operations to accurately grasp job requirements.</li>
                     <li>We thoroughly research the talent distribution channels of target markets</li>
                     <li>We leverage multiple public and proprietary professional channels to find candidates of the best fit.</li>
                 </ul>
+                -->
             </div>
+
+            <div class="core-box">
+                <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
+                <div style="padding-bottom: 5px;">
+                    <h3>Sales Effectiveness</h3>
+                </div>
+                <p>Improve your sales by optimizing your systems and team.</p>
+            </div>
+
+            <div class="core-box">
+                <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
+                <div style="padding-bottom: 5px;">
+                    <h3>Market Entry</h3>
+                </div>
+                <p>Our market analysis services help our clients navigate
+                    unfamiliar markets in Asia and the Americas. Our in-house local marketing
+                    experts conduct outreach and research to meet client needs.</p>
+            </div>
+            <div class="core-box">
+                <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
+                <div style="padding-bottom: 5px;">
+                    <h3>Interim Professionals</h3>
+                </div>
+                <p>
+                    Quickly access top-tier talent across any industry and role—whether for short-term, just-in-time needs or long-term strategic projects—tailored to your specific timeline.
+                </p>
+            </div>
+            <div class="core-box">
+                <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
+                <div style="padding-bottom: 5px;">
+                    <h3>RPO (Recruitment Process Outsourcing)</h3>
+                </div>
+                <p>
+                    Scale your hiring efficiently by tapping into advanced technology and data-driven talent strategies—optimizing results while lowering recruitment costs.
+                </p>
+            </div>
+
+            <!--
             <div class="core-box">
                 <img src="https://cdn0.iconfinder.com/data/icons/documents-27/32/check-512.png" alt="HR">
                 <div style="padding-bottom: 5px;">
@@ -390,11 +480,12 @@ footer {
                     <li>We conduct in-depth assessments and reference checks to ensure the best cultural and strategic fit.</li>
                 </ul>
             </div>
+            -->
         </div>
     </section>
 
     <section class="contact-form" id="contact-form">
-        <h2>Leave A Message</h2>
+        <h2>Schedule A Consultation</h2>
         <form method="POST" action="/contact" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="text" name="first_name" placeholder="First Name *" required>
@@ -411,9 +502,9 @@ footer {
             <div class="form-group">
                 <select required name="service_interested">
                     <option value="">Category *</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Service Request">Service Request</option>
-                    <option value="Careers at SHC">Careers at SHC</option>
+                    <option value="Service Request">Business</option>
+                    <option value="General Inquiry">Inquiry</option>
+                    <option value="Careers at SHC">Careers</option>
                 </select>
             </div>
             <div class="form-group">
@@ -424,7 +515,11 @@ footer {
     </section>
 
     <footer>
-        &copy; 2025 Standard Human Capital - All Rights Reserved
+        <div class="footer-text">&copy; 2025 Standard Human Capital - All Rights Reserved</div>
+        <div class="footer-btns">
+            <div class="footer-linkedin-btn"></div>
+            <div class="footer-twitter-btn"></div>
+        </div>
     </footer>
 
 </body>

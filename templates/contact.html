@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Standard Human Capital</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
-    <script defer src="contact.js"></script>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         /* Global Styles */
@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         body {
@@ -23,10 +23,10 @@
         }
 
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -39,16 +39,31 @@ body {
     font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    padding: 120px 5% 60px 5%;
-    background: #007BFF;
-    color: white;
-}
+    /* Hero Section */
+    .hero {
+        width: 100%;
+        height: calc(100vh); /* Subtracting header height */
+        background-image: url('{{ url_for('static', filename='images/index/hero.jpg') }}');
+        background-size: cover; /* Makes sure image fills entire container */
+        background-position: center; /* Centers image */
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-overlay {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 0 10%;
+    }
+
+    .hero-overlay h1 {
+        font-size: clamp(30px, 4vw, 60px);
+        font-weight: bold;
+    }
+
+    
 
 h1 {
     font-size: 4vw;
@@ -136,8 +151,11 @@ h3 {
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
+
 
 
         .section h2 {
@@ -251,13 +269,51 @@ h3 {
 }
 
 
-/* Footer */
+
+
+
+/* FOOTER */
 footer {
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* or any background color */
+    color: white;
+    padding: 15px 5%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
+
+.footer-text {
+    font-size: 0.9rem;
+}
+
+.footer-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-btns div {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Specific icons */
+.footer-twitter-btn {
+    background-image: url('{{ url_for("static", filename="images/generic/twitter.png") }}');
+}
+
+.footer-linkedin-btn {
+    background-image: url('{{ url_for("static", filename="images/generic/linkedin.png") }}');
+}
+
+
 
 @media (max-width: 600px) {
     .hero {
@@ -283,15 +339,27 @@ footer {
             </ul>
         </nav>
     </header>
-
+    <!--
     <section class="hero">
         <div class="hero-text">
-            <!-- Let's Connect / Your message has been sent! -->
+            
             <h1>{{ message | safe }}</h1>
             <a href="#contact-form" class="cta-button">Contact Us</a>
         </div>
         <img src="https://media.istockphoto.com/id/174776170/photo/blue-manhattan-skyscapers-wall-street-new-york-city.jpg?s=612x612&w=0&k=20&c=9r5p7ujfzv98knm8jgWAhXugoKuAtkKaYasKmVKlMkg=" alt="Customer Support">
     </section>
+    -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <div class="hero-overlay">
+                <h1>{{ message | safe }}</h1>
+            </div>
+            <a href="#contact-form" class="cta-button">Contact Us</a>
+        </div>
+        
+     </section>
 
     <section class="section">
         <h2>Locations</h2>
@@ -325,7 +393,7 @@ footer {
     </section>
 
     <section class="contact-form" id="contact-form">
-        <h2>Leave A Message</h2>
+        <h2>Schedule A Consultation</h2>
         <form method="POST" action="/contact" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="text" name="first_name" placeholder="First Name *" required>
@@ -342,9 +410,9 @@ footer {
             <div class="form-group">
                 <select required name="service_interested">
                     <option value="">Category *</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Service Request">Service Request</option>
-                    <option value="Careers at SHC">Careers at SHC</option>
+                    <option value="Service Request">Business</option>
+                    <option value="General Inquiry">Inquiry</option>
+                    <option value="Careers at SHC">Careers</option>
                 </select>
             </div>
             <div class="form-group">
@@ -358,9 +426,13 @@ footer {
             -->
         </form>
     </section>
-
+    
     <footer>
-        &copy; 2025 Standard Human Capital - All Rights Reserved
+        <div class="footer-text">&copy; 2025 Standard Human Capital - All Rights Reserved</div>
+        <div class="footer-btns">
+            <div class="footer-linkedin-btn"></div>
+            <div class="footer-twitter-btn"></div>
+        </div>
     </footer>
 
 </body>
