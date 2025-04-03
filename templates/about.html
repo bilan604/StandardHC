@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Standard Human Capital</title>
+    <title>About</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -34,44 +34,12 @@ body {
     font-size: clamp(16px, 2vw, 20px);
 }
 
-.logo {
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    padding: 120px 5% 60px 5%;
-    color: white;
-}
 
 h1 {
-    font-size: 4vw;
-    font-size: clamp(30px, 4vw, 60px);
-    /* font-size: clamp(30px, 3vw, 50px); */
     margin-top: 20px;
     margin-right: 20px;
     transform: translate(0%, -10%);
 
-}
-
-/* Section Styling */
-.section {
-    padding: 25px 5%;
-}
-
-h2 {
-    font-size: 3.5vw;
-    font-size: clamp(25px, 3vw, 30px);
-}
-
-h3 {
-    font-size: 3vw;
-    font-size: clamp(20px, 3vw, 25px);
 }
 
         /* Header */
@@ -89,6 +57,14 @@ h3 {
             z-index: 1000;
         }
         
+
+
+        .logo {
+            font-size: 2vw;
+            font-weight: bold;
+        }
+
+
         .logo_image {
             position: absolute;
             left: 0%;
@@ -99,6 +75,15 @@ h3 {
             transform: translate(10%, 10%);
         }
 
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            padding: 120px 5% 60px 5%;
+            color: white;
+        }
         nav ul {
             list-style: none;
             display: flex;
@@ -118,13 +103,26 @@ h3 {
         .hero img {
             width: 50%;
             max-width: 500%;
-            
+            border-radius: 5px;
         }
 
+        .section-title {
+            text-align: left;
+            padding: 10vh 5vw 5vh 15vw;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 10px 5% 5vw 5%;
+        }
 
         .section h2 {
             margin-bottom: 20px;
             text-align: center;
+        }
+        
+        .section-description {
+            font-size: 3vh;
         }
 
         .history-text {
@@ -147,30 +145,28 @@ h3 {
             margin-bottom: 30px;
         }
 
+
+
         .commitment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
 
         .commitment-box {
-            padding: 20px;
-            background: #f5f5f5;
-            border-radius: 0px;
+            padding: 2vw 1.5vw 2vw 2.5vw;
+            background: rgb(210, 210, 210);
+            color: black;
+            border-radius: 5px;
             transition: 0.3s;
         }
 
         .commitment-box:hover {
             background: #007BFF;
             color: white;
-            transform: translate(-10%, 0%);
-        }
-
-        .section-title {
-            text-align: left;
-            padding: 20px 5% 0px 5%;
+            transform: translate(-5%, 0%);
         }
 
         /* Leadership Team */
@@ -339,21 +335,21 @@ footer {
         }
 
         .history-box {
+            
+            width: 80%;
+            transform: translate(10%, 0%);
             padding: 10px 20px 10px 20px;
             margin: 20px 0;
             background: #f5f5f5;
-            border-radius: 0px;
+            border-radius: 5px;
             transition: 0.3s;
-            width: 80%;
             text-align: center;
-            transform: translate(10%, 0%);
+            
         }
 
         .history-box:hover {
             background: #007BFF;
             color: white;
-            transform: translate(0%, 0%);
-            
         }
 
         .history-box h2 {
@@ -390,11 +386,11 @@ footer {
         <div class="hero-text">
             <h1>About Standard Human Capital</h1>
         </div>
-        <img src="https://s35891.pcdn.co/wp-content/uploads/LAN_B37_01.jpg.optimal.jpg" alt="Business Meeting">
+        <img src="{{ url_for('static', filename='images/about/hero.png') }}" loading="lazy" alt="">
     </section>
 
     <div class="section-title">
-        <h2 class="section-label">Summary</h2>
+        <h2>Summary</h2>
     </div>
     <section class="section">
         <p class="history-text">
@@ -403,27 +399,35 @@ footer {
     </section>
 
     <div class="section-title">
-        <h2>Our Commitment to Globalization & Talent Solutions</h2>
+        <h2>Our Commitment: Globalization & Talent Solutions</h2>
     </div>
     <section class="section">
         <div class="commitment-grid">
             <div class="commitment-box">
-                <div style="padding-bottom: 5px;">
+                <div style="padding-bottom: 8px;">
                     <h3>✔ Foreign Enterprise Localization</h3>
                 </div>
-                <p>We help foreign enterprises in China find local talent, achieve true localization, and seize the enormous opportunities present in the Asian market.</p>
+                <div class="section-description">
+                    We help foreign enterprises in China find local talent, achieve true localization, and seize the enormous opportunities present in the Asian market.
+                </div>
             </div>
             <div class="commitment-box">
-                <div style="padding-bottom: 5px;">
+                <div style="padding-bottom: 8px;">
                     <h3>✔ Asian Enterprise Globalization</h3>
                 </div>
-                <p>We bring in talent with international perspectives and practical experience for domestic enterprises, enabling Asian companies to implement global strategies and navigate cross-border expansion.</p>
+                <div class="section-description">
+
+                    We bring in talent with international perspectives and practical experience for domestic enterprises, enabling Asian companies to implement global strategies and navigate cross-border expansion.
+                </div>
             </div>
             <div class="commitment-box">
-                <div style="padding-bottom: 5px;">
+                <div style="padding-bottom: 8px;">
                     <h3>✔ Unicorn Company Business Partnerships</h3>
                 </div>
-                <p>We act as strategic business partners for startups, accelerating their growth and creating value to help them become unicorns for the future.</p>
+                <div class="section-description">
+
+                    We act as strategic business partners for startups, accelerating their growth and creating value to help them become unicorns for the future.
+                </div>
             </div>
         </div>
     </section>
@@ -432,22 +436,22 @@ footer {
         <h1>Corporate History</h1>
         
         <div class="history-box">
-            <h2>Early PRC Period - Localization and Talent Search</h2>
+            <h3>Early PRC Period - Localization and Talent Search</h3>
             <p>In the early days of China's reform and opening up, we focused on helping Fortune 500 companies find local talent for their China operations. This period was marked by significant contributions to the localization of foreign enterprises in China.</p>
         </div>
 
         <div class="history-box">
-            <h2>2000s - Supporting Chinese Companies Going Global</h2>
+            <h3>2000s - Supporting Chinese Companies Going Global</h3>
             <p>As Chinese companies began their international expansion, we pivoted to assist them in finding international talent. Our expertise in cross-cultural recruitment became invaluable for companies seeking to establish a global presence.</p>
         </div>
 
         <div class="history-box">
-            <h2>2010s - Tech Industry Focus</h2>
+            <h3>2010s - Tech Industry Focus</h3>
             <p>With the rise of China's tech sector, we specialized in recruiting for technology and fintech companies. Our deep understanding of both traditional and emerging industries allowed us to bridge talent gaps effectively.</p>
         </div>
 
         <div class="history-box">
-            <h2>Present Day - Global Human Capital Solutions</h2>
+            <h3>Present Day - Global Human Capital Solutions</h3>
             <p>Today, we operate as a comprehensive human capital solutions provider, serving both multinational corporations and emerging unicorns. Our services span executive search, talent acquisition, and strategic HR consulting across global markets.</p>
         </div>
     </section>

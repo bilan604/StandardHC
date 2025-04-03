@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Standard Human Capital</title>
+    <title>Contact Us</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -34,40 +34,8 @@ body {
     font-size: clamp(16px, 2vw, 20px);
 }
 
-.logo {
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-    /* Hero Section */
-    .hero {
-        width: 100%;
-        height: calc(100vh); /* Subtracting header height */
-        background-image: url('{{ url_for('static', filename='images/index/hero.jpg') }}');
-        background-size: cover; /* Makes sure image fills entire container */
-        background-position: center; /* Centers image */
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-overlay {
-        text-align: center;
-        color: rgb(255, 255, 255);
-        padding: 0 10%;
-    }
-
-    .hero-overlay h1 {
-        font-size: clamp(30px, 4vw, 60px);
-        font-weight: bold;
-    }
-
-    
 
 h1 {
-    font-size: 4vw;
-    font-size: clamp(30px, 4vw, 60px);
     /* font-size: clamp(30px, 3vw, 50px); */
     margin-top: 20px;
     margin-right: 20px;
@@ -75,20 +43,6 @@ h1 {
 
 }
 
-/* Section Styling */
-.section {
-    padding: 25px 5%;
-}
-
-h2 {
-    font-size: 3.5vw;
-    font-size: clamp(25px, 3vw, 30px);
-}
-
-h3 {
-    font-size: 3vw;
-    font-size: clamp(20px, 3vw, 25px);
-}
 
         /* Header */
         header {
@@ -104,6 +58,11 @@ h3 {
             top: 0;
             z-index: 1000;
         }
+
+        .logo {
+    font-size: 2vw;
+    font-weight: bold;
+}
 
         .logo_image {
             position: absolute;
@@ -130,6 +89,30 @@ h3 {
             font-weight: bold;
         }
 
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            height: calc(100vh); /* Subtracting header height */
+            background-image: url('{{ url_for('static', filename='images/index/hero.jpg') }}');
+            background-size: cover; /* Makes sure image fills entire container */
+            background-position: center; /* Centers image */
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 0 10%;
+        }
+
+        .hero-overlay h1 {
+            font-size: clamp(30px, 4vw, 60px);
+            font-weight: bold;
+        }
+
         .hero-text {
             flex: 1;
         }
@@ -138,7 +121,6 @@ h3 {
             width: 50%;
             max-height: 400px;
             object-fit: cover;
-            
         }
 
 
@@ -158,6 +140,16 @@ h3 {
 
 
 
+    .section-title {
+        text-align: left;
+        padding: 10vh 5vw 5vh 15vw;
+    }
+
+    /* Section Styling */
+    .location-block {
+        padding: 25px 5%;
+    }
+
         .section h2 {
             margin-bottom: 20px;
         }
@@ -173,11 +165,12 @@ h3 {
             height: 40vw;
             max-height: 40vw;
             object-fit: cover;
-            
+            border-radius: 5px;
         }
 
         .contact-info {
             flex: 1;
+            padding: 0vh 0vh 0vh 10vh;
         }
 
         .contact-info p {
@@ -361,30 +354,35 @@ footer {
         
      </section>
 
-    <section class="section">
+    <div class="section-title">
         <h2>Locations</h2>
+    </div>
+
+    <section class="location-block">
         <div class="headquarters">
+            
             <img src="https://images.squarespace-cdn.com/content/v1/569faa8225981d7d092fd97e/1483476522100-LVYFOIC8AW5FCAX2T3O7/625+Adams+Dusk_web.jpg" alt="Headquarters">
+            
             <div class="contact-info">
                 <div class="contact-info-item">
-                    <p><strong>Chicago</strong></p>
+                    <h3>Chicago</h3>
                     <p>625-19F W Adams St, Chicago</p>
                 </div>
                 
                 <div class="contact-info-item">
-                    <p><strong>Shanghai</strong></p>
+                    <h3>Shanghai</h3>
                     <p>7th Floor, Standard Chartered Bank Tower, No. 201 Century Avenue, Shanghai</p>
                 </div>
                 
                 <div class="contact-info-item">
-                    <p><strong>Hong Kong</strong></p>
+                    <h3>Hong Kong</h3>
                     <p>No.C, 16/F, Chinaweal CTR, 414-424 Jaffe RD, Hong Kong</p>                
                 </div>
 
                 <!-- <p>Email: <a href="mailto:info@standardHC.com">info@standardHC.com</a></p> -->
                 <!-- <p>Contact Number: +852 1234 5678</p> -->
                 <div class="contact-info-item">
-                    <p><strong>Website</strong></p>
+                    <h3>Website</h3>
                     <p><a href="https://www.standard-hc.com">WWW.STANDARD-HC.COM</a></p>
                 </div>
                 

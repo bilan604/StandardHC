@@ -15,7 +15,9 @@ h3 {
     /* font-size: clamp(20px, 3vw, 25px); */
 }
 
-
+p {
+    font-size: 3vh;
+}
 
 
 .hero {

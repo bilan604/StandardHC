@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Managed Services - Standard Human Capital</title>
+    <title>Services</title>
     <link rel="icon" href="{{ url_for('static', filename='images/standard_huamn_capital_logo.jpeg') }}">
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -86,22 +86,6 @@ h1 {
 
 
 
-
-/* Section Styling */
-.section {
-    padding: 25px 5%;
-}
-
-h2 {
-    font-size: 3.5vw;
-    font-size: clamp(25px, 3vw, 30px);
-}
-
-h3 {
-    font-size: 3vw;
-    font-size: clamp(20px, 3vw, 25px);
-}
-
         /* Header */
         header {
             display: flex;
@@ -143,7 +127,10 @@ h3 {
         }
 
 
-
+        /* Section Styling */
+        .section {
+            padding: 10px 5% 5vw 5%;
+        }
 
         .section h2 {
             margin-bottom: 20px;
@@ -198,7 +185,7 @@ h3 {
 
         .section-title {
             text-align: left;
-            padding: 20px 5% 0px 5%;
+            padding: 10vh 5vw 5vh 15vw;
         }
         
         /* Responsive */
@@ -279,7 +266,7 @@ footer {
 
         /* Core Business Section */
         .core-business {
-            padding: 30px 5%;
+            padding: 10px 5% 5vw 5%;
         }
 
         .core-business h2 {
@@ -289,24 +276,24 @@ footer {
 
         .core-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
 
         .core-box {
-            padding: 20px 40px 20px 40px;
+            padding: 2vw 1.5vw 2vw 2.5vw;
             background: rgb(210, 210, 210);
             color: black;
-            border-radius: 0px;
+            border-radius: 5px;
             transition: 0.3s;
         }
 
         .core-box:hover {
             background: #007BFF;
             color: white;
-            transform: translate(-10%, 0%);
+            transform: translate(-5%, 0%);
         }
 
         .core-box img {
@@ -314,6 +301,11 @@ footer {
             height: 50px;
             margin-bottom: 15px;
         }
+
+        .core-box-description {
+            font-size: 3vh;
+        }
+
 
         /* Contact Form Styles */
         .contact-form {
@@ -398,17 +390,20 @@ footer {
         </p>
     </section>
 
-    <div class="section-title">
+    <div class="section-title"> <!--style="background: white;"-->
         <h2>Core Business</h2>
     </div>
-    <section class="section">
+    <section class="section"> <!--style="background: white;"-->
         <div class="core-grid">
             <div class="core-box">
                 <img src="https://cdn1.iconfinder.com/data/icons/content-10/24/user-document-checked-512.png" alt="RPO">
                 <div style="padding-bottom: 5px;">
                     <h3>Cross-Border Executive Search</h3>
                 </div>
-                <p>We provide specialized recruitment focused on identifying, attracting, and hiring top-level executives, senior managers, and other high-impact people for global businesses.</p>
+                <div class="core-box-description">
+                
+                    We provide specialized recruitment focused on identifying, attracting, and hiring top-level executives, senior managers, and other high-impact people for global businesses.
+                </div>
                 <!--
                 <ul>
                     <li>We provide complete confidentiality for our clients, candidates, and information pertaining to sensitive leadership transitions.</li>
@@ -422,7 +417,10 @@ footer {
                 <div style="padding-bottom: 5px;">
                     <h3>Talent Acquisition</h3>
                 </div>
-                <p>We conduct comprehensive and in-depth searches, screening precisely and recommending potential candidates for target roles.</p>
+                <div class="core-box-description">
+                
+                    We conduct comprehensive and in-depth searches, screening precisely and recommending potential candidates for target roles.
+                </div>
                 <!--
                 <ul>
                     <li>We integrate with business operations to accurately grasp job requirements.</li>
@@ -437,7 +435,10 @@ footer {
                 <div style="padding-bottom: 5px;">
                     <h3>Sales Effectiveness</h3>
                 </div>
-                <p>Improve your sales by optimizing your systems and team.</p>
+                <div class="core-box-description">
+                
+                    Improve your sales by optimizing your systems and team.
+                </div>
             </div>
 
             <div class="core-box">
@@ -445,27 +446,35 @@ footer {
                 <div style="padding-bottom: 5px;">
                     <h3>Market Entry</h3>
                 </div>
-                <p>Our market analysis services help our clients navigate
-                    unfamiliar markets in Asia and the Americas. Our in-house local marketing
-                    experts conduct outreach and research to meet client needs.</p>
+                <div class="core-box-description">
+                
+                    Our market analysis services help our clients navigate
+                        unfamiliar markets in Asia and the Americas. Our in-house local marketing
+                        experts conduct outreach and research to meet client needs.
+                </div>
             </div>
             <div class="core-box">
                 <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
                 <div style="padding-bottom: 5px;">
                     <h3>Interim Professionals</h3>
                 </div>
-                <p>
+                <div class="core-box-description">
+                    
                     Quickly access top-tier talent across any industry and role—whether for short-term, just-in-time needs or long-term strategic projects—tailored to your specific timeline.
-                </p>
+                </div>
+                    
+                
             </div>
             <div class="core-box">
                 <img src="https://cdn2.iconfinder.com/data/icons/payment-element/64/payment-request-invoice-service-banking-512.png" alt="BPO">
                 <div style="padding-bottom: 5px;">
                     <h3>RPO (Recruitment Process Outsourcing)</h3>
                 </div>
-                <p>
+                <div class="core-box-description">
                     Scale your hiring efficiently by tapping into advanced technology and data-driven talent strategies—optimizing results while lowering recruitment costs.
-                </p>
+                    
+                </div>
+                
             </div>
 
             <!--
