@@ -8,8 +8,19 @@
 <meta name="robots" content="ALL">
 <meta name="author" content="shbewell.com" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<SCRIPT src="/static/js/jquery-1.6.4.min.js" type=text/javascript></SCRIPT>
-<SCRIPT src="/static/js/jcarousellite_1.0.1.min.js" type=text/javascript></SCRIPT>
+
+<!--
+	changing now
+	<SCRIPT src="/static/js/jquery-1.6.4.min.js" type=text/javascript></SCRIPT>
+	<SCRIPT src="/static/js/jcarousellite_1.0.1.min.js" type=text/javascript></SCRIPT>
+
+src="{{ url_for('static', filename='js/jquery-1.6.4.min.js') }}"
+src="{{ url_for('static', filename='js/jcarousellite_1.0.1.min.js') }}"
+-->
+
+<script defer src="{{ url_for('static', filename='js/jquery-1.6.4.min.js') }}"></script>
+<script defer src="{{ url_for('static', filename='js/jcarousellite_1.0.1.min.js') }}"></script>
+
 <!-- <link href="/static/css/smallfbl.css?v=2017022244" rel="stylesheet" type="text/css" /> -->
 <style>
     /* CSS Document */
@@ -47,8 +58,26 @@ a:hover{ color:#39508a; text-decoration:underline;}
 .home_banner{ width:100%; height:628px; overflow:hidden;}
 .home_banner ul{ width:100%; height:628px; margin:0px; overflow:hidden;}
 .home_banner ul li{ width:100%; height:628px; float:left; margin:0px; padding:0px;}
+
+/* changing now 
+
 .home_banner ul li.home_back1{ background:url(../images/home1.jpg) center no-repeat;}
-.home_banner ul li.home_back2{ background:url(../images/home2.jpg) center no-repeat;}
+*/
+.home_banner ul li.home_back1{ background:url(static/images/home1.jpg) center no-repeat;}
+
+/*
+# VERSUS
+background:url(../images/home1.jpg) center no-repeat;
+background-image: url('{{ url_for("static", filename="images/generic/twitter.png") }}');
+
+# VERSUS
+../images/home1.jpg
+'{{ url_for("static", filename="images/generic/twitter.png") }}'
+*/
+
+
+
+.home_banner ul li.home_back2{ background:url(static/images/home2.jpg) center no-repeat;}
 
 .home_banner ol{}
 .home_banner ol li{}
@@ -58,13 +87,13 @@ a:hover{ color:#39508a; text-decoration:underline;}
 .home_top h1{ /*float:left;*/ padding-top:26px; padding-left:7%;}
 .home_top h2{ /*float:left;*/ padding-top:5px; padding-left:7%;}
 .top_right{ width:230px; float:right; padding-right:7%; padding-top:42px; text-align:right; color:#d9e1ed;}
-.top_icon{ background:url(../images/home_icon.gif) right 3px no-repeat; padding-right:8px; margin-right:10px;}
-.top_icon2{ background:url(../images/top_line.gif) right 3px no-repeat; padding-right:10px; margin-right:4px;}
+.top_icon{ background:url(static/images/home_icon.gif) right 3px no-repeat; padding-right:8px; margin-right:10px;}
+.top_icon2{ background:url(static/images/top_line.gif) right 3px no-repeat; padding-right:10px; margin-right:4px;}
 
-.nav{ width:100%; clear:both; background:url(../images/nav_back.gif) center no-repeat; height:36px;}
+.nav{ width:100%; clear:both; background:url(static/images/nav_back.gif) center no-repeat; height:36px;}
 .nav ul{ width:950px; margin:0px auto; font-family:"微软雅黑";}
 .nav li{ width:115px; float:left; font-weight:bold; color:#fff; position:relative;}
-.nav li a{ background:url(../images/nav.gif) no-repeat; display:block; height:36px; line-height:36px;}
+.nav li a{ background:url(static/images/nav.gif) no-repeat; display:block; height:36px; line-height:36px;}
 
 li.nav_1 a{ background-position:0px 0px; width:95px;}
 li.nav_2 a{ background-position:-95px 0; width:115px;}
@@ -93,15 +122,15 @@ li.nav_8 a:hover,li.nav_8 .nav_8_hover{ background-position:-785px -36px; width:
 .top_back h1{ float:left; padding-top:21px; padding-left:25px;}
 .top_back h2{ float:left; padding-top:21px; padding-left:2px;}
 .top_right2{ width:270px; float:right; padding-right:25px; padding-top:35px; text-align:right; color:#888;}
-.top_icon_s{ background:url(../images/home_icons.gif) right 3px no-repeat; padding-right:8px; margin-right:10px;}
-.top_icon2_s{ background:url(../images/top_line2.gif) right 3px no-repeat; padding-right:10px; margin-right:4px;}
+.top_icon_s{ background:url(static/images/home_icons.gif) right 3px no-repeat; padding-right:8px; margin-right:10px;}
+.top_icon2_s{ background:url(static/images/top_line2.gif) right 3px no-repeat; padding-right:10px; margin-right:4px;}
 .top_right2 img{ vertical-align:middle; margin-right:4px;}
 .top_size{ font-size:9px;}
 
-.nav_s{ width:1000px; clear:both; background:url(../images/nav_back2.gif) center no-repeat; height:34px; margin:0px auto;}
+.nav_s{ width:1000px; clear:both; background:url(static/images/nav_back2.gif) center no-repeat; height:34px; margin:0px auto;}
 .nav_s ul{ width:920px; margin:0px auto; font-family:"微软雅黑";}
 .nav_s li{ width:115px; float:left; font-weight:bold; color:#fff; position:relative; padding:0px 0px 0px 1px;}
-.nav_s li a{ background:url(../images/nav.gif) no-repeat; display:block; height:34px; line-height:34px;}
+.nav_s li a{ background:url(static/images/nav.gif) no-repeat; display:block; height:34px; line-height:34px;}
 
 li.nav_1s a{ background-position:0px -72px; width:95px;}
 li.nav_2s a{ background-position:-95px -72px; width:115px;}
@@ -123,9 +152,9 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
 
 .nav_s li div{ position:absolute; bottom:33px; left:0px; border-bottom:2px solid #d1d1d1; border-top:3px solid #d1d1d1; font-family:"宋体"; display:none;}
 .nav_s li div span{ display:block; border-bottom:1px solid #5a5a5a; height:25px; font-size:12px;}
-.nav_s li div span a{ height:25px; line-height:25px; padding-left:22px; width:93px; color:#fff; background:url(../images/nav_hovers.gif) repeat-x; display:block; text-align:left; font-weight:normal;}
-.nav_s li div span a:hover{ color:#fff; text-decoration:underline; height:25px; line-height:25px; text-align:left; background:url(../images/nav_hovers.gif) repeat-x; padding-left:22px; width:93px;}
-.nav_s_line{ background:url(../images/nav_line.gif) no-repeat;}
+.nav_s li div span a{ height:25px; line-height:25px; padding-left:22px; width:93px; color:#fff; background:url(static/images/nav_hovers.gif) repeat-x; display:block; text-align:left; font-weight:normal;}
+.nav_s li div span a:hover{ color:#fff; text-decoration:underline; height:25px; line-height:25px; text-align:left; background:url(static/images/nav_hovers.gif) repeat-x; padding-left:22px; width:93px;}
+.nav_s_line{ background:url(static/images/nav_line.gif) no-repeat;}
 
 /*  banner图片样式  */
 .banner{ width:1000px; height:217px; margin:0px auto;}
@@ -136,10 +165,10 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
 .menu{ background:#dde1ec; padding-bottom:30px;}
 .menu ul{ margin:0px;}
 .menu li{ width:100%; color:#39508a; line-height:28px; border-bottom:1px solid #a2acc6;}
-.menu li a{ background:url(../images/menu.gif) 0px 0px no-repeat; display:block; padding-left:120px; width:80px; height:28px; line-height:28px; color:#39508a;}
-.menu li a:hover,.menu li .menu_hover{ background:url(../images/menu.gif) 0px -28px no-repeat; color:#fff; text-decoration:none;}
-.left_img{ background:url(../images/left_img_s.jpg) no-repeat; display:block; width:200px; height:104px;}
-.left_img2{ background:url(../images/left_img2_s.jpg) no-repeat; display:block; width:200px; height:104px;}
+.menu li a{ background:url(static/images/menu.gif) 0px 0px no-repeat; display:block; padding-left:120px; width:80px; height:28px; line-height:28px; color:#39508a;}
+.menu li a:hover,.menu li .menu_hover{ background:url(static/images/menu.gif) 0px -28px no-repeat; color:#fff; text-decoration:none;}
+.left_img{ background:url(static/images/left_img_s.jpg) no-repeat; display:block; width:200px; height:104px;}
+.left_img2{ background:url(static/images/left_img2_s.jpg) no-repeat; display:block; width:200px; height:104px;}
 
 .center{ width:560px; float:left; margin-left:30px; padding-top:20px; display:inline;}
 .center h1{ border-bottom:1px solid #a8a8a8; color:#000; font-size:16px; font-weight:bold; padding-left:12px; font-family:"微软雅黑"; height:24px;}
@@ -174,7 +203,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
 
 .web_map{ padding:20px 8px 20px 8px; clear:both;}
 .web_box{ width:100%; padding-bottom:8px; padding-top:8px; overflow:hidden;}
-.web_box h3{ display:block; height:30px; padding-left:10px; line-height:30px; font-size:15px; color:#1c66b4; background:url(../images/site_icon.gif) left no-repeat; font-weight:bold; border-bottom:1px dotted #ccc; font-family:"微软雅黑";}
+.web_box h3{ display:block; height:30px; padding-left:10px; line-height:30px; font-size:15px; color:#1c66b4; background:url(static/images/site_icon.gif) left no-repeat; font-weight:bold; border-bottom:1px dotted #ccc; font-family:"微软雅黑";}
 .web_box h3 a{ color:#1c66b4;}
 .web_box h3 a:hover{ color:#49a108; text-decoration:none;}
 .web_box ul{ margin:0px; clear:both; padding:10px 0px 8px 10px; width:690px; display:block; border-bottom:1px dotted #ccc; font-family:"微软雅黑"; overflow:hidden;}
@@ -184,7 +213,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
 
 .right{ width:180px; float:right; padding-top:6px;}
 /*  右边图片样式  */
-.right_img1{ background:url(../images/right_img1_s.jpg) no-repeat; width:180px; height:81px; display:block; margin-bottom:5px;}
+.right_img1{ background:url(static/images/right_img1_s.jpg) no-repeat; width:180px; height:81px; display:block; margin-bottom:5px;}
 .right_img{ width:180px; height:81px; display:block;}
 /*  右边图片样式  */
 .foot{ width:1000px; margin:0px auto; border-top:1px solid #a8a8a8; text-align:center; padding-top:8px; color:#8a8a8a; padding-bottom:30px; clear:both;}
@@ -328,6 +357,8 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
     width: 24px;
 }
 </style>
+
+
 <script>
 $(window).resize(function(){if (document.body.clientWidth >= 1400){
 		document.getElementsByTagName("link")[0].href="/static/css/bigfbl.css?v=2017022244"; 
@@ -374,12 +405,18 @@ body{ background:#000;}
 <div id="home">
 <!--[if !IE]>首页头部开始<![endif]-->
 <div class="home_top_back"><div class="home_top">
+	<!-- 
+		# changing now
 	<h1><a href="/zh_cn/default/index.html"><img src="/static/images/logo.gif" border="0" /></a></h1>
+	<h1><a href="/zh_cn/default/index.html"><img src="{{ url_for('static', filename='images/index/logo.gif') }}" border="0" /></a></h1>	
+	-->
+	<h1><a href="/"><img src="{{ url_for('static', filename='images/logo.gif') }}" border="0" /></a></h1>
+	
 	<!--<h2 style="display:none"><a href="/zh_cn/default/index.html"><img src="/static/images/11.jpg" border="0" /></a></h2>-->
     <div class="top_right gray_d">
     <a href="javascript:void(0)" class="top_icon">English</a>
     <!-- <a href="" class="top_icon2">招聘</a> -->
-    <a href="/zh_cn/contact/index.html">联系我们</a></div>
+    <a href="/contact">联系我们</a></div>
 </div></div>
 <!--[if !IE]>首页头部结束<![endif]-->
 <!--[if !IE]>首页背景图片开始<![endif]-->
@@ -462,36 +499,36 @@ $(function(){
 <!--[if !IE]>首页导航开始<![endif]-->
 <div class="nav">
 	<ul>
-    	<li class="nav_1" style="width:95px;"><a href="/zh_cn/default/index.html" class="nav_1_hover"></a>
-		        <li class="nav_2"><a href="/zh_cn/about/index.html"></a>
+    	<li class="nav_1" style="width:95px;"><a href="/" class="nav_1_hover"></a>
+		        <li class="nav_2"><a href="/about"></a>
         	            <div>
-            	                <span ><a href="/zh_cn/about/management_layer.html" style="padding-left:34px; width:81px;">管理层</a></span>
-                                <span ><a href="/zh_cn/about/history.html" style="padding-left:34px; width:81px;">发展历程</a></span>
-                                <span ><a href="/zh_cn/about/advantage.html" style="padding-left:34px; width:81px;">业务优势</a></span>
-                                <span ><a href="/zh_cn/about/cultural_vision.html" style="padding-left:34px; width:81px;">愿景文化</a></span>
+            	                <span ><a href="/about" style="padding-left:34px; width:81px;">管理层</a></span>
+                                <span ><a href="/about_history" style="padding-left:34px; width:81px;">发展历程</a></span>
+                                <span ><a href="/about_advantage" style="padding-left:34px; width:81px;">业务优势</a></span>
+                                <span ><a href="/about_cultural_vision" style="padding-left:34px; width:81px;">愿景文化</a></span>
                             </div>
                     </li>
-                <li class="nav_3"><a href="/zh_cn/service/index.html"></a>
+                <li class="nav_3"><a href="/service"></a>
         	            <div>
-            	                <span ><a href="/zh_cn/service/industry-specific.html" >行业专项业务</a></span>
-                                <span ><a href="/zh_cn/service/function-specific.html" >职能专项业务</a></span>
-                                <span ><a href="/zh_cn/service/caiwuguanlizixun.html" >财富管理咨询</a></span>
-                                <span ><a href="/zh_cn/service/directors.html" >董事会服务</a></span>
+            	                <span ><a href="/service_industry_specific" >行业专项业务</a></span>
+                                <span ><a href="/service_function_specific" >职能专项业务</a></span>
+                                <span ><a href="/service_caiwuguanlizixun" >财富管理咨询</a></span>
+                                <span ><a href="/service_directors" >董事会服务</a></span>
                             </div>
                     </li>
-                <li class="nav_4"><a href="/zh_cn/process/index.html"></a>
+                <li class="nav_4"><a href="/process"></a>
         	            <div>
-            	                <span ><a href="/zh_cn/process/assess.html" >企业领袖评估</a></span>
-                                <span ><a href="/zh_cn/process/development.html" >企业领袖发展</a></span>
-                                <span ><a href="/zh_cn/process/operating-guidelines.html" >操作准则</a></span>
+            	                <span ><a href="/process" >企业领袖评估</a></span>
+                                <span ><a href="/process_development" >企业领袖发展</a></span>
+                                <span ><a href="/process_operating_guidelines" >操作准则</a></span>
                             </div>
                     </li>
-                <li class="nav_5"><a href="/zh_cn/cases/index.html"></a>
+                <li class="nav_5"><a href="/cases"></a>
         	        </li>
-                <li class="nav_6"><a href="/zh_cn/contact/index.html"></a>
+                <li class="nav_6"><a href="/contact"></a>
         	        </li>
                 <li style="width: auto;white-space: nowrap;opacity: 1;float: right;">
-            <a href="http://www.miitbeian.gov.cn"  target="_blank" style="background: no-repeat;">沪ICP备11014438号-1</a>
+            
         </li>
     </ul>
 </div>

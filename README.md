@@ -96,3 +96,9 @@ nohup gunicorn --bind 127.0.0.1:8000 app:app &
 ```
 
 
+
+
+## TODOS:
+
+Delete all <a href="http://www.miitbeian.gov.cn"  target="_blank" style="background: no-repeat;">沪ICP备11014438号-1</a> from .html files
+
