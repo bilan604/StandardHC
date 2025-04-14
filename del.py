@@ -4,9 +4,10 @@ dd = {'href="/zh_cn/default/index.html"': 'href="/"', 'href="/zh_cn/service/inde
 
 s = """
 
+
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
     <meta charset="utf-8">
-    <title>业务优势 - 新坦达（上海）资产管理有限公司</title>
+    <title>联系我们 - 新坦达（上海）资产管理有限公司</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="ALL">
@@ -15,7 +16,6 @@ s = """
     <script src="/static/js/jquery-1.6.4.min.js" type="text/javascript"></script>
     <script src="/static/js/jcarousellite_1.0.1.min.js" type="text/javascript"></script>
     <link href="/static/css/smallfbl.css?v=2017022244" rel="stylesheet" type="text/css">
-
     <style>
         @charset "utf-8";
 /* CSS Document */
@@ -395,13 +395,13 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
             <a href="/zh_cn/contact/index.html">联系我们</a></div>
     </div>
     <!--[if !IE]>首页头部结束<![endif]-->
-    <div class="banner" style=" background:url(/uploadfiles/page/2012-10/135028570406.95-OPCENb.jpg) center no-repeat;"></div>
+    <div class="banner" style=" background:url(/uploadfiles/page/2012-10/135028772937.06-ArdSBS.jpg) center no-repeat;"></div>
     <!--[if !IE]>内页导航开始<![endif]-->
     <div class="nav_s">
         <ul>
             <li class="nav_1s" style="width:95px;"><a href="/zh_cn/default/index.html"></a>
-                    </li><li class="nav_2s nav_s_line"><a href="/zh_cn/about/index.html" class="nav_2s_hover"></a>
-                            <div style="display: none;">
+                    </li><li class="nav_2s nav_s_line"><a href="/zh_cn/about/index.html" class=""></a>
+                            <div>
                                     <span><a href="/zh_cn/about/management_layer.html" style="padding-left:34px; width:81px;">管理层</a></span>
                                     <span><a href="/zh_cn/about/history.html" style="padding-left:34px; width:81px;">发展历程</a></span>
                                     <span><a href="/zh_cn/about/advantage.html" style="padding-left:34px; width:81px;">业务优势</a></span>
@@ -409,7 +409,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
                                 </div>
                         </li>
                     <li class="nav_3s nav_s_line"><a href="/zh_cn/service/index.html" class=""></a>
-                            <div style="display: none;">
+                            <div>
                                     <span><a href="/zh_cn/service/industry-specific.html">行业专项业务</a></span>
                                     <span><a href="/zh_cn/service/function-specific.html">职能专项业务</a></span>
                                     <span><a href="/zh_cn/service/caiwuguanlizixun.html">财富管理咨询</a></span>
@@ -417,7 +417,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
                                 </div>
                         </li>
                     <li class="nav_4s nav_s_line"><a href="/zh_cn/process/index.html" class=""></a>
-                            <div style="display: none;">
+                            <div>
                                     <span><a href="/zh_cn/process/assess.html">企业领袖评估</a></span>
                                     <span><a href="/zh_cn/process/development.html">企业领袖发展</a></span>
                                     <span><a href="/zh_cn/process/operating-guidelines.html">操作准则</a></span>
@@ -425,7 +425,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
                         </li>
                     <li class="nav_5s nav_s_line"><a href="/zh_cn/cases/index.html" class=""></a>
                         </li>
-                    <li class="nav_6s nav_s_line"><a href="/zh_cn/contact/index.html" class=""></a>
+                    <li class="nav_6s nav_s_line"><a href="/zh_cn/contact/index.html" class="nav_6s_hover"></a>
                         </li>
                 </ul>
     </div>
@@ -441,29 +441,39 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
                 <ul>
                                     <li><a href="/zh_cn/about/management_layer.html" class="">管理层</a></li>
                                     <li><a href="/zh_cn/about/history.html" class="">发展历程</a></li>
-                                    <li><a href="/zh_cn/about/advantage.html" class="menu_hover">业务优势</a></li>
+                                    <li><a href="/zh_cn/about/advantage.html" class="">业务优势</a></li>
                                     <li><a href="/zh_cn/about/cultural_vision.html" class="">愿景文化</a></li>
                                     <!-- <li><a href="" class="">文章与报告</a></li> -->
-                    <li><a href="/zh_cn/contact/index.html" class="">联系我们</a></li>
+                    <li><a href="/zh_cn/contact/index.html" class="menu_hover">联系我们</a></li>
                 </ul>
             </div>  </div>
         
         <div class="center">
-            <h1>业务优势</h1>
+            <h1>联系我们</h1>
             <div class="about kd-content">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个出色的团队是商业成功的关键，了解金融科技服务市场中的特殊挑战的顾问能帮助您找到您所需要的人力资本服务。<br>
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    STANDARD的大部分顾问在金融科技行业占据重要地位。<br>
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    作为人力资本服务公司，STANDARD凭着“德为先”的理念价值与员工出色的工作技能走到了今天，并活跃于中国的各个角落。我们日益壮大的团队，与全球的紧密联系能满足您招聘人才的需要。        </div>
+            <b style="display:block;padding-top:10px;">中国.上海</b> <p><b>总部</b></p>
+    <p>地址：上海浦东陆家嘴浦东南路528号，上海证券大厦南塔2208室 <br>
+    电话：86-21-31267716&nbsp;&nbsp;&nbsp;&nbsp; 邮编：200120<br>
+    网址：<span class="blue_2"><a href="http://www.standardhc.com" target="_blank">http://www.StandardHC.com</a></span><br>
+    <span class="blue_2 map_1"><a href="http://goo.gl/maps/kdhIa" target="_blank">查看地图</a></span></p>
+    <p>&nbsp;</p>
+    <p><b>中国.北京</b></p>
+    <p>地址：北京市朝阳区永安东里16号CBD国际大厦5层</p>
+    <p>
+    电话：86-21-65637507 &nbsp; &nbsp;<br>
+    网址：<span class="blue_2"><a href="http://www.standardhc.com" target="_blank">http://www.StandardHC.com</a></span><br>
+    <span class="blue_2 map_1"><br>
+    </span></p>
+    <p>
+    </p>
+    <p>&nbsp;</p>
+    <p></p>        </div>
         </div>
         
         <div class="right">
             <div class="right_img1"></div>
-            <div id="small" class="right_img" style="background:url(/uploadfiles/page/2012-10/135028570406.68-CxtPGN.jpg); "></div>
-            <div id="big" class="right_img" style="background: url(&quot;/uploadfiles/page/2012-10/135028570405.29-xoLawI.jpg&quot;); display: none;"></div>
+            <div id="small" class="right_img" style="background:url(/uploadfiles/page/2012-10/135028772936.74-xfswSV.jpg); "></div>
+            <div id="big" class="right_img" style="background: url(&quot;/uploadfiles/page/2012-10/135028772936.12-xoVpCk.jpg&quot;); display: none;"></div>
         </div>
         
         
@@ -474,7 +484,6 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
     document.writeln("<a href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120329174136346'><img src='/static/images/icon_ss.gif' border=0></a>")</SCRIPT> -->
     </div>
     <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><div id="shadow-host-companion"></div></div></body></html>
-
 
 
 """.strip()
