@@ -318,3 +318,15 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
     height: 24px;
     width: 24px;
 }
+/* #### retroactively added because the /cases/ page, and only the cases page, was not conforming to the  */
+/* font sizing in this css file */
+/* gg */
+.about.kd-content table,
+.about.kd-content th,
+.about.kd-content td {
+    font-size: 12px;
+    /* Optionally ensure font-family consistency: */
+    font-family: Verdana, "宋体", Arial, sans-serif;
+    line-height: 20px;
+}
+/* #### */
