@@ -131,7 +131,7 @@ def cases():
 def contact():
     return render_template('contact.html')
 
-# TODO: "/zh_cn/sitemap/index.html": "/"
+# TODO: "/": "/"
 # ?
 
 
