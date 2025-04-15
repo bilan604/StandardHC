@@ -18,4 +18,4 @@ venv/
 
 .DS_Store
 
-remove_comments
+remove_comments.py
