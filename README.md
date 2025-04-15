@@ -96,9 +96,15 @@ nohup gunicorn --bind 127.0.0.1:8000 app:app &
 ```
 
 
+## Notes  
+Notes on how the html files were created.  
+
+1. Inspect and copy the <html> tag and paste into local file  
+2. Go to browser sources and get the css file contents and add the css in a <style> block in the html file  
+3. Copy the html file and replace variable s in del.py with it and run it to get the new version of the html file  
+4. Fix the image references (i.e. uploadfiles/ -> ../static/uploadfiles) (if its in the <styles> block then use background:url(static/images/top_line2.gif), if it's inline css then use background:url(../static/images/top_line2.gif))  
 
 
-## TODOS:
-
-Delete all <a href="http://www.miitbeian.gov.cn"  target="_blank" style="background: no-repeat;">沪ICP备11014438号-1</a> from .html files
+## TODO  
+-Delete all <a href="http://www.miitbeian.gov.cn"  target="_blank" style="background: no-repeat;">沪ICP备11014438号-1</a> from .html files
 

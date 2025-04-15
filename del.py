@@ -7,7 +7,7 @@ s = """
 
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
     <meta charset="utf-8">
-    <title>联系我们 - 新坦达（上海）资产管理有限公司</title>
+    <title>成功案例 - 新坦达（上海）资产管理有限公司</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="ALL">
@@ -15,7 +15,7 @@ s = """
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <script src="/static/js/jquery-1.6.4.min.js" type="text/javascript"></script>
     <script src="/static/js/jcarousellite_1.0.1.min.js" type="text/javascript"></script>
-    <link href="/static/css/smallfbl.css?v=2017022244" rel="stylesheet" type="text/css">
+    <link href="/static/css/styles.css" rel="stylesheet" type="text/css">
     <style>
         @charset "utf-8";
 /* CSS Document */
@@ -336,18 +336,18 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
     </style>
     <script>
     $(window).resize(function(){if (document.body.clientWidth >= 1400){
-            document.getElementsByTagName("link")[0].href="/static/css/bigfbl.css?v=2017022244"; 
+            document.getElementsByTagName("link")[0].href="/static/css/styles.css"; 
             $('#big').show();$('#small').hide();
             }else{
-            document.getElementsByTagName("link")[0].href="/static/css/smallfbl.css?v=2017022244";
+            document.getElementsByTagName("link")[0].href="/static/css/styles.css";
             $('#small').show();$('#big').hide();
             } });
     $(function(){
         if (document.body.clientWidth >= 1400){
-            document.getElementsByTagName("link")[0].href="/static/css/bigfbl.css?v=2017022244"; 
+            document.getElementsByTagName("link")[0].href="/static/css/styles.css"; 
             $('#big').show();$('#small').hide();
             }else{
-            document.getElementsByTagName("link")[0].href="/static/css/smallfbl.css?v=2017022244";
+            document.getElementsByTagName("link")[0].href="/static/css/styles.css";
             $('#small').show();$('#big').hide();
             }
         $('.nav_s li').hover(
@@ -395,7 +395,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
             <a href="/zh_cn/contact/index.html">联系我们</a></div>
     </div>
     <!--[if !IE]>首页头部结束<![endif]-->
-    <div class="banner" style=" background:url(/uploadfiles/page/2012-10/135028772937.06-ArdSBS.jpg) center no-repeat;"></div>
+    <div class="banner" style=" background:url(/uploadfiles/page/2012-10/135031124187.08-gHDbzw.jpg) center no-repeat;"></div>
     <!--[if !IE]>内页导航开始<![endif]-->
     <div class="nav_s">
         <ul>
@@ -417,15 +417,15 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
                                 </div>
                         </li>
                     <li class="nav_4s nav_s_line"><a href="/zh_cn/process/index.html" class=""></a>
-                            <div>
+                            <div style="display: none;">
                                     <span><a href="/zh_cn/process/assess.html">企业领袖评估</a></span>
                                     <span><a href="/zh_cn/process/development.html">企业领袖发展</a></span>
                                     <span><a href="/zh_cn/process/operating-guidelines.html">操作准则</a></span>
                                 </div>
                         </li>
-                    <li class="nav_5s nav_s_line"><a href="/zh_cn/cases/index.html" class=""></a>
+                    <li class="nav_5s nav_s_line"><a href="/zh_cn/cases/index.html" class="nav_5s_hover"></a>
                         </li>
-                    <li class="nav_6s nav_s_line"><a href="/zh_cn/contact/index.html" class="nav_6s_hover"></a>
+                    <li class="nav_6s nav_s_line"><a href="/zh_cn/contact/index.html" class=""></a>
                         </li>
                 </ul>
     </div>
@@ -437,43 +437,232 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
     <div class="main">
     
       <div class="left">
-                    <div class="menu">
-                <ul>
-                                    <li><a href="/zh_cn/about/management_layer.html" class="">管理层</a></li>
-                                    <li><a href="/zh_cn/about/history.html" class="">发展历程</a></li>
-                                    <li><a href="/zh_cn/about/advantage.html" class="">业务优势</a></li>
-                                    <li><a href="/zh_cn/about/cultural_vision.html" class="">愿景文化</a></li>
-                                    <!-- <li><a href="" class="">文章与报告</a></li> -->
-                    <li><a href="/zh_cn/contact/index.html" class="menu_hover">联系我们</a></li>
-                </ul>
-            </div>  </div>
+        <div class="menu" style="padding-bottom:0px;">
+            <ul>
+                <li>
+                    <a class="menu_hover" href="/zh_cn/cases/index.html">成功案例</a>
+                </li>
+            </ul>
+        </div>
+    
+          <div class="left_img"></div>
+     </div>
         
         <div class="center">
-            <h1>联系我们</h1>
+            <h1>成功案例</h1>
             <div class="about kd-content">
-            <b style="display:block;padding-top:10px;">中国.上海</b> <p><b>总部</b></p>
-    <p>地址：上海浦东陆家嘴浦东南路528号，上海证券大厦南塔2208室 <br>
-    电话：86-21-31267716&nbsp;&nbsp;&nbsp;&nbsp; 邮编：200120<br>
-    网址：<span class="blue_2"><a href="http://www.standardhc.com" target="_blank">http://www.StandardHC.com</a></span><br>
-    <span class="blue_2 map_1"><a href="http://goo.gl/maps/kdhIa" target="_blank">查看地图</a></span></p>
-    <p>&nbsp;</p>
-    <p><b>中国.北京</b></p>
-    <p>地址：北京市朝阳区永安东里16号CBD国际大厦5层</p>
-    <p>
-    电话：86-21-65637507 &nbsp; &nbsp;<br>
-    网址：<span class="blue_2"><a href="http://www.standardhc.com" target="_blank">http://www.StandardHC.com</a></span><br>
-    <span class="blue_2 map_1"><br>
-    </span></p>
-    <p>
-    </p>
-    <p>&nbsp;</p>
-    <p></p>        </div>
+            <b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【保险公司】</b> <span style="display:block;border-bottom:1px dashed #aaa;padding-bottom:8px;margin-bottom:15px;"> <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td width="28%"><strong>财产保险</strong></td>
+        <td width="31%">&nbsp;</td>
+        <td width="19%"><strong>寿险</strong></td>
+        <td width="22%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>精算总监</td>
+        <td>理赔经理（水险车险）</td>
+        <td rowspan="4">首席销售副总裁<br>
+          首席市场营销官<br>
+          总精算师<br>
+          银行保险部总经理 <br>
+    </td>
+        <td rowspan="4">首席营运副总裁<br>
+          固定收益投资总监<br>
+          团险部助理副总裁</td>
+      </tr>
+      <tr>
+        <td>业管部经理 </td>
+        <td>业务分析师</td>
+        </tr>
+      <tr>
+        <td colspan="2">核保总监/中高级核保（财产险责任险水险车险人意险等）</td>
+        </tr>
+      <tr>
+        <td colspan="2">直保/再保经纪人（客户经理，分公司经理）</td>
+        </tr>
+    </tbody>
+    </table>
+    </span> <b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【银行】</b> <span style="display:block;border-bottom:1px dashed #aaa;padding-bottom:8px;margin-bottom:15px;"> <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td rowspan="2" valign="top" width="33%"><strong>外资银行</strong><br>
+        Credit approval head<br>
+        Corporate Training Manager <br>
+        Treasury Sales VP<br>
+        China Marketing Head<br>
+        Structured Trade Finance<br>
+        Syndication Analyst AVP
+        </td>
+        <td valign="top" width="27%">&nbsp;</td>
+        <td valign="top" width="21%"><strong>中资银行</strong></td>
+        <td width="19%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top">FI China Head <br>
+    GTS Cash Sales VP <br>
+    TTLC Relationship Manager <br>
+    Senior Credit Analyst <br>
+    Treasury Sales VP </td>
+        <td valign="top" width="21%">行长<br>
+    运营主管<br>
+    区域业务总监<br>
+    国际业务部总经理 </td>
+        <td valign="top" width="19%">私人银行负责人<br>
+    合规总监/审计总监<br>
+    贸易融资部总经理</td>
+      </tr>
+                            </tbody>
+    </table>
+    </span> <b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【投资公司】</b> <span style="display:block;border-bottom:1px dashed #aaa;padding-bottom:8px;margin-bottom:15px;"> <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td valign="top" width="32%">首席代表<br>
+    投资总监<br>
+    风控总监</td>
+        <td valign="top" width="39%">合伙人/总经理助理<br>
+          投资者关系总监<br>
+    行业研究总监</td>
+        <td valign="top" width="29%">审计总监<br>
+          税务负责人</td>
+      </tr>
+    </tbody>
+    </table>
+                         </span> <b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【证劵公司】</b> <span style="display:block;border-bottom:1px dashed #aaa;padding-bottom:8px;margin-bottom:15px;"> <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td valign="top" width="32%">投行总经理<br>
+    投行项目部高级副总裁<br>
+    高级行业研究分析师<br>
+    QFII业务部副总裁<br>
+    </td>
+        <td valign="top" width="39%">研究所营销策划总监<br>
+    保荐人<br>
+    证券承销部总经理<br>
+    固定收益部投资总经理</td>
+        <td valign="top" width="29%">金融工程及产品总监<br>
+    并购部总经理<br>
+    经纪业务部总经理<br>
+    稽核部总经理</td>
+      </tr>
+    </tbody>
+    </table>
+                     </span> <b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【基金公司】</b> <span style="display:block;border-bottom:1px dashed #aaa;padding-bottom:8px;margin-bottom:15px;"> <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td valign="top" width="32%">合资基金公司（筹）首席执行官<br>
+    策略研究高级经理<br>
+    <br>
+    </td>
+        <td valign="top" width="39%">合资基金公司（筹）首席投资官<br>
+    基金经理（股票型，债券型，货币型）</td>
+        <td valign="top" width="29%">金融机构渠道销售总监<br>
+    ETF投资经理</td>
+      </tr>
+    </tbody>
+    </table>
+                                                                               </span> <p><b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;"><b class="bule_2" style="line-height:18px;display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【房地产】</b></b></p>
+    <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td colspan="5"><strong>房地产开发</strong></td>
+    </tr>
+    <tr><td valign="top">城市公司总经理<br>
+    工程经理<br>
+    招商经理<br>
+    </td>
+    <td valign="top">事业部总经理<br>
+    商业运营副总<br>
+    景观设计师</td>
+    <td valign="top">总建筑师<br>
+    精装修经理<br>
+    成本总监<br>
+    </td>
+    <td valign="top">总工程师<br>
+    安监副总<br>
+    土建成本经理</td>
+    <td valign="top">集团工程副总<br>
+    理财务副总经理<br>
+    法务高级经理</td>
+    </tr>
+    <tr><td colspan="5" valign="top" style="padding-top:14px;"><strong>投融资及地产金融</strong></td>
+    </tr>
+    <tr><td valign="top">投资总监<br>
+    再募集经理</td>
+    <td valign="top">宏观经济分析师<br>
+    REITS</td>
+    </tr>
+    </tbody>
+    </table>
+    <p><b class="bule_2" style="display:block;padding-top:10px;margin-left:-4px;padding-bottom:5px;">【TMT】</b></p>
+     <p><span style="display:block;border-bottom:1px dashed #aaa;padding-bottom:8px;margin-bottom:15px;"></span></p><table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody><tr>
+        <td colspan="5"><b>互联网</b></td>
+        </tr>
+      <tr>
+        <td valign="top">运营副总<br>
+    UI/UE<br>
+    </td>
+        <td valign="top">数字营销总监<br>
+    商业运营副总<br>
+    &nbsp; &nbsp;</td>
+        <td valign="top">产品经理/总监<br>
+    PHP/Java技术总监<br>
+    <br>
+    </td>
+        <td valign="top">金融支付总经理<br>
+    互联网部门董事总经理<br>
+    <br>
+    </td>
+        <td valign="top">P2P高级信审<br>
+    C/C++产品经理<br>
+    <br>
+    </td>
+      </tr>
+      <tr><td colspan="5" style="padding-top:14px;" valign="top"><table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family:Verdana, 宋体;"><tbody><tr><td colspan="5"><b>IT</b></td>
+    </tr>
+    <tr><td valign="top">技术总监<br>
+    软件研发总监</td>
+    <td valign="top">首席系统构架师<br>
+    &nbsp; &nbsp;</td>
+    <td valign="top">云服务项目总监<br>
+    <br>
+    </td>
+    <td valign="top">MM PP资深顾问<br>
+    <br>
+    <br>
+    </td>
+    <td valign="top">BI/BA<br>
+    <br>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <p><b style="font-family:Verdana, 宋体;font-size:12px;">金融科技</b></p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <p></p>
+    <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td valign="top">资深研发工程师<br>
+    产品运营专家</td>
+    <td valign="top">事业部副总裁<br>
+    AI领域专家 &nbsp;&nbsp;</td>
+    <td valign="top">产品专家<br>
+    大数据分析</td>
+    <td valign="top">金融数据模型专家<br>
+    智能学习产品专家<br>
+    <br>
+    </td>
+    <td valign="top">贷款审批专家<br>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    &nbsp;&nbsp;<p></p>
+    <table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td colspan="5" style="padding-top:14px;" valign="top"><table class="ke-zeroborder" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family:Verdana, 宋体;"></table>
+    </td>
+    </tr>
+    </tbody>
+    </table>        </div>
         </div>
         
         <div class="right">
             <div class="right_img1"></div>
-            <div id="small" class="right_img" style="background:url(/uploadfiles/page/2012-10/135028772936.74-xfswSV.jpg); "></div>
-            <div id="big" class="right_img" style="background: url(&quot;/uploadfiles/page/2012-10/135028772936.12-xoVpCk.jpg&quot;); display: none;"></div>
+            <div id="small" class="right_img" style="background:url(/uploadfiles/page/2012-10/135031124186.8-WMUhwK.jpg); "></div>
+            <div id="big" class="right_img" style="background: url(&quot;/uploadfiles/page/2012-10/135031124184.4-vKZoZE.jpg&quot;); display: none;"></div>
         </div>
         
         
@@ -484,6 +673,7 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
     document.writeln("<a href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120329174136346'><img src='/static/images/icon_ss.gif' border=0></a>")</SCRIPT> -->
     </div>
     <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><div id="shadow-host-companion"></div></div></body></html>
+
 
 
 """.strip()
