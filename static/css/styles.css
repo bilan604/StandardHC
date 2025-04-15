@@ -52,7 +52,7 @@ What
 .top_icon{ background:url(static/images/home_icon.gif) right 3px no-repeat; padding-right:8px; margin-right:10px;}
 .top_icon2{ background:url(static/images/top_line.gif) right 3px no-repeat; padding-right:10px; margin-right:4px;}
 
-.nav{ width:100%; clear:both; background:url(static/images/nav_back.gif) center no-repeat; height:36px;}
+.nav{ width:100%; clear:both; background:url(../images/nav_back.gif) center no-repeat; height:36px;}
 .nav ul{ width:950px; margin:0px auto; font-family:"微软雅黑";}
 .nav li{ width:115px; float:left; font-weight:bold; color:#5c88ff; position:relative;}
 .nav li a{ background:url(../images/nav.gif) no-repeat; display:block; height:36px; line-height:36px;}
@@ -89,10 +89,10 @@ li.nav_8 a:hover,li.nav_8 .nav_8_hover{ background-position:-785px -36px; width:
 .top_right2 img{ vertical-align:middle; margin-right:4px;}
 .top_size{ font-size:9px;}
 
-.nav_s{ width:1000px; clear:both; background:url(static/images/nav_back2.gif) center no-repeat; height:34px; margin:0px auto;}
+.nav_s{ width:1000px; clear:both; background:url(../images/nav_back2.gif) center no-repeat; height:34px; margin:0px auto;}
 .nav_s ul{ width:920px; margin:0px auto; font-family:"微软雅黑";}
 .nav_s li{ width:115px; float:left; font-weight:bold; color:#fff; position:relative; padding:0px 0px 0px 1px;}
-.nav_s li a{ background:url(static/images/nav.gif) no-repeat; display:block; height:34px; line-height:34px;}
+.nav_s li a{ background:url(../images/nav.gif) no-repeat; display:block; height:34px; line-height:34px;}
 
 li.nav_1s a{ background-position:0px -72px; width:95px;}
 li.nav_2s a{ background-position:-95px -72px; width:115px;}
@@ -114,9 +114,9 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
 
 .nav_s li div{ position:absolute; bottom:33px; left:0px; border-bottom:2px solid #d1d1d1; border-top:3px solid #d1d1d1; font-family:"宋体"; display:none;}
 .nav_s li div span{ display:block; border-bottom:1px solid #5a5a5a; height:25px; font-size:12px;}
-.nav_s li div span a{ height:25px; line-height:25px; padding-left:22px; width:93px; color:#fff; background:url(static/images/nav_hovers.gif) repeat-x; display:block; text-align:left; font-weight:normal;}
-.nav_s li div span a:hover{ color:#fff; text-decoration:underline; height:25px; line-height:25px; text-align:left; background:url(static/images/nav_hovers.gif) repeat-x; padding-left:22px; width:93px;}
-.nav_s_line{ background:url(static/images/nav_line.gif) no-repeat;}
+.nav_s li div span a{ height:25px; line-height:25px; padding-left:22px; width:93px; color:#fff; background:url(../images/nav_hovers.gif) repeat-x; display:block; text-align:left; font-weight:normal;}
+.nav_s li div span a:hover{ color:#fff; text-decoration:underline; height:25px; line-height:25px; text-align:left; background:url(../images/nav_hovers.gif) repeat-x; padding-left:22px; width:93px;}
+.nav_s_line{ background:url(../images/nav_line.gif) no-repeat;}
 
 /*  banner图片样式  */
 .banner{ width:1000px; height:217px; margin:0px auto;}
