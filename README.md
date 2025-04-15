@@ -110,5 +110,3 @@ For some reason the font sizes are too larger on:
 /cases/  
 Otherwise all the pages are identical except forr qualitative changes.  
 
--(Done?) Delete all <a href="http://www.miitbeian.gov.cn"  target="_blank" style="background: no-repeat;">沪ICP备11014438号-1</a> from .html files  
-
