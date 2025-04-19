@@ -38,6 +38,7 @@ GLOBAL_MINUTE_MAX = "60 per second"
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def home():
+    print("Index Reached")
     return render_template('index.html')
 
 #/about
