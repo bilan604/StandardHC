@@ -1,8 +1,10 @@
-from flask import Flask, request
+from flask import Flask, request, session
 from flask import redirect, render_template, url_for
 
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+
+from flask import make_response, redirect
 
 from src.classes.turtle import Turtle
 
@@ -33,12 +35,23 @@ GLOBAL_MINUTE_MAX = "60 per second"
 #/cases
 #/contact
 
+@app.route('/set_language/<lang_code>')
+def set_language(lang_code):
+    if lang_code not in ['en', 'zh']:
+        lang_code = 'zh'  # fallback
+    
+    resp = make_response(redirect(request.referrer or url_for('/')))
+    resp.set_cookie('language', lang_code, max_age=60*60*24*365)  # 1 year
+    return resp
+
 #/
 @app.route("/", methods=["GET"])
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def home():
-    print("Index Reached")
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/index.html')
     return render_template('index.html')
 
 #/about
@@ -46,6 +59,9 @@ def home():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/about.html')
     return render_template('about.html')
 
 #/about_history
@@ -53,6 +69,9 @@ def about():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about_history():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/about_history.html')
     return render_template('about_history.html')
 
 #/about_advantage
@@ -60,6 +79,9 @@ def about_history():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about_advantage():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/about_advantage.html')
     return render_template('about_advantage.html')
 
 #/about_cultural_vision
@@ -67,6 +89,9 @@ def about_advantage():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about_cultural_vision():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/about_cultural_vision.html')
     return render_template('about_cultural_vision.html')
 
 #/service
@@ -74,6 +99,9 @@ def about_cultural_vision():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/service.html')
     return render_template('service.html')
 
 #/service_function_specific
@@ -81,6 +109,9 @@ def service():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service_function_specific():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/service_function_specific.html')
     return render_template('service_function_specific.html')
 
 #/service_caiwuguanlizixun
@@ -88,6 +119,9 @@ def service_function_specific():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service_caiwuguanlizixun():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/service_caiwuguanlizixun.html')
     return render_template('service_caiwuguanlizixun.html')
 
 #/service_directors
@@ -95,6 +129,9 @@ def service_caiwuguanlizixun():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service_directors():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/service_directors.html')
     return render_template('service_directors.html')
 
 #/process
@@ -102,6 +139,9 @@ def service_directors():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def process():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/process.html')
     return render_template('process.html')
 
 #/process_development
@@ -109,6 +149,9 @@ def process():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def process_development():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/process_development.html')
     return render_template('process_development.html')
 
 #/process_operating_guidelines
@@ -116,6 +159,9 @@ def process_development():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def process_operating_guidelines():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/process_operating_guidelines.html')
     return render_template('process_operating_guidelines.html')
 
 #/cases
@@ -123,6 +169,9 @@ def process_operating_guidelines():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def cases():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/cases.html')
     return render_template('cases.html')
 
 #/contact
@@ -130,6 +179,9 @@ def cases():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def contact():
+    lang = request.cookies.get('language', 'zh')
+    if lang == 'en':
+        return render_template('english/contact.html')
     return render_template('contact.html')
 
 # TODO: "/": "/"
