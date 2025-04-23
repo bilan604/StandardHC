@@ -49,7 +49,7 @@ def set_language(lang_code):
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def home():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/index.html')
     return render_template('index.html')
@@ -59,7 +59,7 @@ def home():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/about.html')
     return render_template('about.html')
@@ -69,7 +69,7 @@ def about():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about_history():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/about_history.html')
     return render_template('about_history.html')
@@ -79,7 +79,7 @@ def about_history():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about_advantage():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/about_advantage.html')
     return render_template('about_advantage.html')
@@ -89,7 +89,7 @@ def about_advantage():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def about_cultural_vision():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/about_cultural_vision.html')
     return render_template('about_cultural_vision.html')
@@ -99,7 +99,7 @@ def about_cultural_vision():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/service.html')
     return render_template('service.html')
@@ -109,7 +109,7 @@ def service():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service_function_specific():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/service_function_specific.html')
     return render_template('service_function_specific.html')
@@ -119,7 +119,7 @@ def service_function_specific():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service_caiwuguanlizixun():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/service_caiwuguanlizixun.html')
     return render_template('service_caiwuguanlizixun.html')
@@ -129,7 +129,7 @@ def service_caiwuguanlizixun():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def service_directors():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/service_directors.html')
     return render_template('service_directors.html')
@@ -139,7 +139,7 @@ def service_directors():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def process():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/process.html')
     return render_template('process.html')
@@ -149,7 +149,7 @@ def process():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def process_development():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/process_development.html')
     return render_template('process_development.html')
@@ -159,7 +159,7 @@ def process_development():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def process_operating_guidelines():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/process_operating_guidelines.html')
     return render_template('process_operating_guidelines.html')
@@ -169,7 +169,7 @@ def process_operating_guidelines():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def cases():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/cases.html')
     return render_template('cases.html')
@@ -179,7 +179,7 @@ def cases():
 @limiter.limit(GLOBAL_SECOND_MAX)
 @limiter.limit(GLOBAL_MINUTE_MAX)
 def contact():
-    lang = request.cookies.get('language', 'zh')
+    lang = request.cookies.get('language', 'en')
     if lang == 'en':
         return render_template('english/contact.html')
     return render_template('contact.html')
