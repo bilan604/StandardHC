@@ -38,8 +38,8 @@ a:hover{ color:#39508a; text-decoration:underline;}
 /*
 What
 */
-.home_banner ul li.home_back1{ background:url(../images/home1.jpg) no-repeat;}
-.home_banner ul li.home_back2{ background:url(../images/home2.jpg) center no-repeat;}
+.home_banner ul li.home_back1{ background:url(../images/home1.png) no-repeat;}
+.home_banner ul li.home_back2{ background:url(../images/home2.png) center no-repeat;}
 
 .home_banner ol{}
 .home_banner ol li{}
@@ -100,7 +100,7 @@ li.nav_8 a:hover,li.nav_8 .nav_8_hover{ background-position:-785px -36px; width:
 .nav_s li div{ position:absolute; bottom:33px; left:0px; border-bottom:2px solid #d1d1d1; border-top:3px solid #d1d1d1; font-family:"宋体"; display:none;}
 
 /* !!!! */
-.nav_s {transform: translate(130px, 0px);}
+.nav_s {transform: translate(131px, 0px);}
 
 /* About Us */
 .nav_2s div {width: 155px}
