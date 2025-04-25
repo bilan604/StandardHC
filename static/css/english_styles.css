@@ -98,7 +98,7 @@ li.nav_8 a:hover,li.nav_8 .nav_8_hover{ background-position:-785px -36px; width:
 .nav_s ul li a {border-bottom: 1px solid white; color: white; text-align: center;}
 
 .nav_s li div{ position:absolute; bottom:33px; left:0px; border-bottom:2px solid #d1d1d1; border-top:3px solid #d1d1d1; font-family:"宋体"; display:none;}
-.nav_s {transform: translate(130px, 0px);}
+
 
 /* About Us */
 .nav_2s div {width: 200px}
@@ -366,8 +366,9 @@ li.nav_8s a:hover, li.nav_8s .nav_8s_hover { background-position: -1085px -106px
 }
 /* #### */
 
-@media (max-width: 800px) {
+
+@media (min-width: 800px) {
     .nav_s {
-        transform: translate(0px, 0px);
+        transform: translate(130px, 0px);
     }
 }
