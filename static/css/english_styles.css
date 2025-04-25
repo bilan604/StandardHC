@@ -99,21 +99,23 @@ li.nav_8 a:hover,li.nav_8 .nav_8_hover{ background-position:-785px -36px; width:
 
 .nav_s li div{ position:absolute; bottom:33px; left:0px; border-bottom:2px solid #d1d1d1; border-top:3px solid #d1d1d1; font-family:"宋体"; display:none;}
 
+/* !!!! */
+.nav_s {transform: translate(130px, 0px);}
 
 /* About Us */
-.nav_2s div {width: 200px}
-.nav_2s div span {width: 200px}
-.nav_2s div span a {width: 200px}
-li.nav_2s a:hover, li.nav_2s .nav_2s_hover { background-position: -155px -106px; width:200px;}
+.nav_2s div {width: 155px}
+.nav_2s div span {width: 155px}
+.nav_2s div span a {width: 155px}
+li.nav_2s a:hover, li.nav_2s .nav_2s_hover { background-position: -155px -106px; width:155px; max-width: 155px;}
 
-li.nav_1s a { background-position: 0px -72px; width: 115px;}
-li.nav_2s a { background-position: -155px -72px; width: 200px;}
-li.nav_3s a { background-position: -310px -72px; width: 200px;}
-li.nav_4s a { background-position: -465px -72px; width: 200px;}
-li.nav_5s a { background-position: -620px -72px; width: 155px;}
-li.nav_6s a { background-position: -775px -72px; width:155px;}
-li.nav_7s a { background-position: -930px -72px; width:155px;}
-li.nav_8s a { background-position: -1085px -72px; width:155px;}
+li.nav_1s a { background-position: 0px -72px; width: 85px;  max-width: 85px;}
+li.nav_2s a { background-position: -155px -72px; width: 155px; max-width: 155px;}
+li.nav_3s a { background-position: -310px -72px; width: 155px; max-width: 155px;}
+li.nav_4s a { background-position: -465px -72px; width: 155px; max-width: 155px;}
+li.nav_5s a { background-position: -620px -72px; width: 85px;  max-width: 85px;}
+li.nav_6s a { background-position: -775px -72px; width:115px;  max-width: 115px;}
+li.nav_7s a { background-position: -930px -72px; width:115px;  max-width: 115px;}
+li.nav_8s a { background-position: -1085px -72px; width:115px;  max-width: 115px;}
 
 
 /*
@@ -366,9 +368,10 @@ li.nav_8s a:hover, li.nav_8s .nav_8s_hover { background-position: -1085px -106px
 }
 /* #### */
 
-
+/*
 @media (min-width: 800px) {
     .nav_s {
         transform: translate(130px, 0px);
     }
 }
+*/
