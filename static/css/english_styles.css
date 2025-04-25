@@ -365,3 +365,9 @@ li.nav_8s a:hover, li.nav_8s .nav_8s_hover { background-position: -1085px -106px
     line-height: 20px;
 }
 /* #### */
+
+@media (max-width: 800px) {
+    .nav_s {
+        transform: translate(0px, 0px);
+    }
+}
