@@ -175,7 +175,14 @@ li.nav_8s a:hover,li.nav_8s .nav_8s_hover{ background-position:-785px -106px; wi
 
 .right{ width:180px; float:right; padding-top:6px;}
 /*  右边图片样式  */
-.right_img1{ background:url(../images/right_img1.jpg) no-repeat; width:180px; height:81px; display:block; margin-bottom:5px;}
+.right_img1 {
+    background: url(../images/right_img1_s_eng.jpg) no-repeat;
+    background-size: 100% 100%;  /* Stretches the image to fill the box */
+    width: 180px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 5px auto;  /* Horizontally centers the element */
+}
 .right_img{ width:180px; height:81px; display:block;}
 /*  右边图片样式  */
 .foot{ width:1000px; margin:0px auto; border-top:1px solid #a8a8a8; text-align:center; padding-top:8px; color:#8a8a8a; padding-bottom:30px; clear:both;}
