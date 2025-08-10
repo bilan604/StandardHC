@@ -1,4 +1,4 @@
-#!/home/bilan604gm/StandardHC/myenv/bin/python3
+#!/root/StandardHC/myenv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys

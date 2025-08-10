@@ -1,8 +1,8 @@
 from flask import Flask, request, session
 from flask import redirect, render_template, url_for
 
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
+#from flask_limiter import Limiter
+#from flask_limiter.util import get_remote_address
 
 from flask import make_response, redirect
 
@@ -12,7 +12,7 @@ from src.handling.post import handle_contact_post_request
 
 
 app = Flask(__name__)
-limiter = Limiter(get_remote_address, app=app, default_limits=["100 per minute", "1000 per hour"])
+#limiter = Limiter(get_remote_address, app=app, default_limits=["100 per minute", "1000 per hour"])
 
 # Tighter limits can be added within function for POST requests, etc
 # but it should never exceed these quotas
@@ -46,8 +46,8 @@ def set_language(lang_code):
 
 #/
 @app.route("/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def home():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -56,8 +56,8 @@ def home():
 
 #/about
 @app.route("/about/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def about():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -66,8 +66,8 @@ def about():
 
 #/about_history
 @app.route("/about_history/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def about_history():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -76,8 +76,8 @@ def about_history():
 
 #/about_advantage
 @app.route("/about_advantage/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def about_advantage():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -86,8 +86,8 @@ def about_advantage():
 
 #/about_cultural_vision
 @app.route("/about_cultural_vision/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def about_cultural_vision():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -96,8 +96,8 @@ def about_cultural_vision():
 
 #/service
 @app.route("/service/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def service():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -106,8 +106,8 @@ def service():
 
 #/service_function_specific
 @app.route("/service_function_specific/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def service_function_specific():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -116,8 +116,8 @@ def service_function_specific():
 
 #/service_caiwuguanlizixun
 @app.route("/service_caiwuguanlizixun/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def service_caiwuguanlizixun():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -126,8 +126,8 @@ def service_caiwuguanlizixun():
 
 #/service_directors
 @app.route("/service_directors/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def service_directors():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -136,8 +136,8 @@ def service_directors():
 
 #/process
 @app.route("/process/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def process():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -146,8 +146,8 @@ def process():
 
 #/process_development
 @app.route("/process_development/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def process_development():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -156,8 +156,8 @@ def process_development():
 
 #/process_operating_guidelines
 @app.route("/process_operating_guidelines/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def process_operating_guidelines():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -166,8 +166,8 @@ def process_operating_guidelines():
 
 #/cases
 @app.route("/cases/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def cases():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -176,8 +176,8 @@ def cases():
 
 #/contact
 @app.route("/contact/", methods=["GET"])
-@limiter.limit(GLOBAL_SECOND_MAX)
-@limiter.limit(GLOBAL_MINUTE_MAX)
+#@limiter.limit(GLOBAL_SECOND_MAX)
+#@limiter.limit(GLOBAL_MINUTE_MAX)
 def contact():
     lang = request.cookies.get('language', 'en')
     if lang == 'en':
@@ -188,8 +188,8 @@ def contact():
 # ?
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     
-    app.run(host="http://127.0.0.1:8000")
+    #app.run(host="http://127.0.0.1:8000")
     # suggested: 'change to app.run(host="127.0.0.1", port=8000) to avoid a ValueError on app startup',
     # but no errors observed using app.run(host="http://127.0.0.1:8000")
