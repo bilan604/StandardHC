@@ -38,7 +38,7 @@ a:hover{ color:#39508a; text-decoration:underline;}
 /*
 What
 */
-.home_banner ul li.home_back1{ background:url(../images/home1.png) no-repeat;}
+.home_banner ul li.home_back1{ background:url(../images/home1.png) center no-repeat;}
 .home_banner ul li.home_back2{ background:url(../images/home2.png) center no-repeat;}
 
 .home_banner ol{}
@@ -89,33 +89,85 @@ li.nav_8 a:hover,li.nav_8 .nav_8_hover{ background-position:-785px -36px; width:
 .top_right2 img{ vertical-align:middle; margin-right:4px;}
 .top_size{ font-size:9px;}
 
-.nav_s{ clear:both; height:34px; margin:0px auto;}
-.nav_s ul{ margin:0px auto; font-family:"微软雅黑";}
-.nav_s li{ float:left; font-weight:bold; color:#fff; position:relative; padding:0px 0px 0px 1px;}
-.nav_s li a{ background-color: black; display:block; height:34px; line-height:34px;}
+/* New nav s code for english menu below */
+/* ########################
+/* Give H1 and NAV the same left edge */
+.wrap { max-width: 1000px; margin: 0 auto; } /* use your site width */
+
+/* NAV container */
+.nav_s{ max-width: 1000px; margin: 0 auto; transform: translate(-0.5px, 1px); font-family: Arial;}   /* remove translate hack */
+.nav_s > .wrap{ display:flex; }                /* ensures ul uses wrapper width */
+
+/* Flex row for the menu */
+.nav_s ul{
+  display:flex;
+  align-items:stretch;
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-family:"微软雅黑";
+}
+
+/* Drop floats; keep your original relative/padding */
+.nav_s li{
+  float:none;                 /* ← remove floats */
+  font-weight:bold;
+  color:#fff;
+  position:relative;
+  padding:0 0 0 1px;
+}
+
+.nav_s li a{
+  background-color:black;
+  display:block;
+  height:34px;
+  line-height:34px;
+}
 
 /* The navbar redirects without dropdowns */
-.nav_s ul li a {border-bottom: 1px solid white; color: white; text-align: center;}
+.nav_s ul li a{
+  border-bottom:1px solid white;
+  color:white;
+  text-align:center;
+}
 
-.nav_s li div{ position:absolute; bottom:33px; left:0px; border-bottom:2px solid #d1d1d1; border-top:3px solid #d1d1d1; font-family:"宋体"; display:none;}
+/* Dropdown container (unchanged) */
+.nav_s li div{
+  position:absolute;
+  bottom:33px;
+  left:0;
+  border-bottom:2px solid #d1d1d1;
+  border-top:3px solid #d1d1d1;
+  font-family:"宋体";
+  display:none;
+}
 
-/* !!!! */
-.nav_s {transform: translate(131px, 0px);}
+/* REMOVE THIS (old alignment hack)
+.nav_s { transform: translate(131px, 0px); }
+*/
 
-/* About Us */
-.nav_2s div {width: 155px}
-.nav_2s div span {width: 155px}
-.nav_2s div span a {width: 155px}
-li.nav_2s a:hover, li.nav_2s .nav_2s_hover { background-position: -155px -106px; width:155px; max-width: 155px;}
+/* About Us dropdown sizing (kept) */
+.nav_2s div{ width:155px }
+.nav_2s div span{ width:155px }
+.nav_2s div span a{ width:155px }
+li.nav_2s a:hover, li.nav_2s .nav_2s_hover{
+  background-position:-155px -106px; width:155px; max-width:155px;
+}
 
-li.nav_1s a { background-position: 0px -72px; width: 85px;  max-width: 85px;}
-li.nav_2s a { background-position: -155px -72px; width: 155px; max-width: 155px;}
-li.nav_3s a { background-position: -310px -72px; width: 155px; max-width: 155px;}
-li.nav_4s a { background-position: -465px -72px; width: 155px; max-width: 155px;}
-li.nav_5s a { background-position: -620px -72px; width: 85px;  max-width: 85px;}
-li.nav_6s a { background-position: -775px -72px; width:115px;  max-width: 115px;}
-li.nav_7s a { background-position: -930px -72px; width:115px;  max-width: 115px;}
-li.nav_8s a { background-position: -1085px -72px; width:115px;  max-width: 115px;}
+/* Per-button widths preserved so spacing/relationship is identical */
+li.nav_1s a{ background-position:   0px -72px;  width: 85px; max-width: 85px; }
+li.nav_2s a{ background-position:-155px -72px;  width:155px; max-width:155px; }
+li.nav_3s a{ background-position:-310px -72px;  width:155px; max-width:155px; }
+li.nav_4s a{ background-position:-465px -72px;  width:155px; max-width:155px; }
+li.nav_5s a{ background-position:-620px -72px;  width: 85px; max-width: 85px; }
+li.nav_6s a{ background-position:-775px -72px;  width:115px; max-width:115px; }
+li.nav_7s a{ background-position:-930px -72px;  width:115px; max-width:115px; }
+li.nav_8s a{ background-position:-1085px -72px; width:115px; max-width:115px; }
+
+.nav_s ul li.nav_s_line {
+
+}
+/* ######################## */
 
 
 /*
